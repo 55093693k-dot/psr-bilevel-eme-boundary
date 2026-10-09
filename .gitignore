@@ -4,3 +4,12 @@ __pycache__/
 
 # Jupyter checkpoint folders
 .ipynb_checkpoints/
+
+# Lumerical project files: 30-130 MB each (one is over GitHub's per-file limit),
+# and they are results rather than dependencies -- the scripts under
+# second_solver/ rebuild them.
+*.lms
+
+# Run outputs from the cloud and local solvers: results rather than dependencies,
+# and the scripts in sim/ regenerate them (see README, "Scripts and data").
+sim/data_*.hdf5

@@ -1,0 +1,144 @@
+{
+  "structure": {
+    "L_tot_um": 200.0,
+    "straight_um": 50.0,
+    "bend_um": 100.0,
+    "dy_um": 5.0,
+    "w_um": 0.5,
+    "t_si_um": 0.22,
+    "lam_um": 1.55,
+    "modes_per_port": 2,
+    "materials": "Lumerical built-in Palik Si / SiO2 (declared substitution)"
+  },
+  "points": [
+    {
+      "cell_um": 1.0,
+      "cells": 200,
+      "project": "min_sbend_eme_1um.lms",
+      "propagate_ok": true,
+      "result_provider": "EME",
+      "result_name": "user s matrix",
+      "result_tries": [
+        "EME / user s matrix -> OK"
+      ],
+      "result_keys": null,
+      "S_shape": [
+        2,
+        2
+      ],
+      "S_abs2": [
+        [
+          0.006758,
+          0.004755
+        ],
+        [
+          0.004755,
+          0.006758
+        ]
+      ],
+      "colsum_per_input": [
+        0.011512,
+        0.011512
+      ],
+      "diag": [
+        0.006758,
+        0.006758
+      ]
+    }
+  ],
+  "port_probe": {
+    "tried": [
+      {
+        "port_1": "'in get, no items are currently selected'"
+      },
+      {
+        "port_2": "'in get, no items are currently selected'"
+      },
+      {
+        "port_3": "'in get, no items are currently selected'"
+      },
+      {
+        "port_4": "'in get, no items are currently selected'"
+      },
+      {
+        "port": "'in get, no items are currently selected'"
+      },
+      {
+        "EME port": "'in get, no items are currently selected'"
+      },
+      {
+        "EME::port_1": "'in get, no items are currently selected'"
+      },
+      {
+        "EME::port_2": "'in get, no items are currently selected'"
+      },
+      {
+        "EME::port_3": "'in get, no items are currently selected'"
+      },
+      {
+        "EME::port_4": "'in get, no items are currently selected'"
+      },
+      {
+        "EME port 1": "'in get, no items are currently selected'"
+      },
+      {
+        "EME port 2": "'in get, no items are currently selected'"
+      }
+    ],
+    "found": null
+  },
+  "resource_attempts": [
+    {
+      "form": "setresource(prop, value, solver='MODE')",
+      "result": "FAIL: 'Invalid solver specified'"
+    },
+    {
+      "form": "setresource(prop, value, solver='mode')",
+      "result": "FAIL: 'Invalid solver specified'"
+    },
+    {
+      "form": "setresource(prop, value, solver='Lumerical')",
+      "result": "FAIL: 'Invalid solver specified'"
+    },
+    {
+      "form": "setresource(prop, value, solver='lumerical')",
+      "result": "FAIL: 'Invalid solver specified'"
+    },
+    {
+      "form": "setresource(prop, value)",
+      "result": "FAIL: 'Invalid solver specified'"
+    },
+    {
+      "form": "setresource(solver='MODE', prop, value)",
+      "result": "FAIL: 'Invalid solver specified'"
+    },
+    {
+      "form": "setresource(solver='mode', prop, value)",
+      "result": "FAIL: 'Invalid solver specified'"
+    },
+    {
+      "form": "setresource(prop, value, solver='eme')",
+      "result": "FAIL: 'Invalid solver specified'"
+    },
+    {
+      "form": "setresource(prop, value, solver='FDTD')",
+      "result": "FAIL: 'Invalid solver specified'"
+    },
+    {
+      "form": "setresource(prop='threads', value=4, solver='MODE')",
+      "result": "FAIL: 'Invalid solver specified'"
+    },
+    {
+      "form": "setresource(prop='threads', value=4, solver='mode')",
+      "result": "FAIL: 'Invalid solver specified'"
+    },
+    {
+      "form": "getresource('processes','MODE')",
+      "result": "FAIL: 'Invalid solver specified'"
+    },
+    {
+      "form": "getresource('processes','mode')",
+      "result": "FAIL: 'Invalid solver specified'"
+    }
+  ]
+}

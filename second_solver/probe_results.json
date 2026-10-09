@@ -1,0 +1,201 @@
+{
+  "structure": {
+    "L_tot_um": 200.0,
+    "w_um": 0.5,
+    "t_si_um": 0.22,
+    "lam_um": 1.55,
+    "materials": "Lumerical built-in Palik Si / SiO2 (declared substitution)"
+  },
+  "hypothesis": "H1: ~1% column-sum is a truncated EME mode basis, not cell length",
+  "points": [
+    {
+      "dy_um": 0.0,
+      "modes": 2,
+      "cell_um": 5.0,
+      "cells": 40,
+      "propagate_ok": true,
+      "provider": "EME",
+      "result_name": "user s matrix",
+      "S_shape": [
+        2,
+        2
+      ],
+      "colsum": [
+        1.0,
+        1.0
+      ],
+      "diag": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "dy_um": 0.0,
+      "modes": 24,
+      "cell_um": 5.0,
+      "cells": 40,
+      "propagate_ok": true,
+      "provider": "EME",
+      "result_name": "user s matrix",
+      "S_shape": [
+        2,
+        2
+      ],
+      "colsum": [
+        1.0,
+        1.0
+      ],
+      "diag": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "dy_um": 5.0,
+      "modes": 2,
+      "cell_um": 5.0,
+      "cells": 40,
+      "propagate_ok": true,
+      "provider": "EME",
+      "result_name": "user s matrix",
+      "S_shape": [
+        2,
+        2
+      ],
+      "colsum": [
+        0.009006,
+        0.009006
+      ],
+      "diag": [
+        0.009006,
+        0.009006
+      ]
+    },
+    {
+      "dy_um": 5.0,
+      "modes": 4,
+      "cell_um": 5.0,
+      "cells": 40,
+      "propagate_ok": true,
+      "provider": "EME",
+      "result_name": "user s matrix",
+      "S_shape": [
+        2,
+        2
+      ],
+      "colsum": [
+        0.003018,
+        0.003018
+      ],
+      "diag": [
+        0.003018,
+        0.003018
+      ]
+    },
+    {
+      "dy_um": 5.0,
+      "modes": 8,
+      "cell_um": 5.0,
+      "cells": 40,
+      "propagate_ok": true,
+      "provider": "EME",
+      "result_name": "user s matrix",
+      "S_shape": [
+        2,
+        2
+      ],
+      "colsum": [
+        0.054922,
+        0.054922
+      ],
+      "diag": [
+        0.054916,
+        0.054916
+      ]
+    },
+    {
+      "dy_um": 5.0,
+      "modes": 16,
+      "cell_um": 5.0,
+      "cells": 40,
+      "propagate_ok": true,
+      "provider": "EME",
+      "result_name": "user s matrix",
+      "S_shape": [
+        2,
+        2
+      ],
+      "colsum": [
+        0.023316,
+        0.023316
+      ],
+      "diag": [
+        0.023302,
+        0.023302
+      ]
+    },
+    {
+      "dy_um": 5.0,
+      "modes": 24,
+      "cell_um": 5.0,
+      "cells": 40,
+      "propagate_ok": true,
+      "provider": "EME",
+      "result_name": "user s matrix",
+      "S_shape": [
+        2,
+        2
+      ],
+      "colsum": [
+        0.020635,
+        0.020635
+      ],
+      "diag": [
+        0.020489,
+        0.020489
+      ]
+    },
+    {
+      "dy_um": 5.0,
+      "modes": 32,
+      "cell_um": 5.0,
+      "cells": 40,
+      "propagate_ok": true,
+      "provider": "EME",
+      "result_name": "user s matrix",
+      "S_shape": [
+        2,
+        2
+      ],
+      "colsum": [
+        0.050669,
+        0.050669
+      ],
+      "diag": [
+        0.046482,
+        0.046482
+      ]
+    },
+    {
+      "dy_um": 5.0,
+      "modes": 48,
+      "cell_um": 5.0,
+      "cells": 40,
+      "propagate_ok": true,
+      "provider": "EME",
+      "result_name": "user s matrix",
+      "S_shape": [
+        2,
+        2
+      ],
+      "colsum": [
+        0.053891,
+        0.053891
+      ],
+      "diag": [
+        0.053389,
+        0.053389
+      ]
+    }
+  ]
+}

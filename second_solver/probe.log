@@ -1,0 +1,56 @@
+2026-10-07 21:18:28  build dy=0.0 um: modes=2, x span=200.000 um, centre=100.000 um, y span=6.000 um
+2026-10-07 21:18:28  --- point dy=0.0 um modes=2 cell=5.00 um (40 cells) ---
+2026-10-07 21:18:35  S shape=[2, 2] diag=[0.0, 0.0] colsum=[1.0, 1.0]
+2026-10-07 21:18:35  build dy=0.0 um: modes=24, x span=200.000 um, centre=100.000 um, y span=6.000 um
+2026-10-07 21:18:35  --- point dy=0.0 um modes=24 cell=5.00 um (40 cells) ---
+2026-10-07 21:18:57  S shape=[2, 2] diag=[0.0, 0.0] colsum=[1.0, 1.0]
+2026-10-07 21:18:57  build dy=5000000.0 um: modes=2, x span=200.000 um, centre=100.000 um, y span=5000006.000 um
+2026-10-07 21:18:57  --- point dy=5000000.0 um modes=2 cell=5.00 um (40 cells) ---
+2026-10-07 21:19:13  S shape=[2, 2] diag=[0.011181, 0.154424] colsum=[0.011181, 0.154424]
+2026-10-07 21:19:13  build dy=5000000.0 um: modes=4, x span=200.000 um, centre=100.000 um, y span=5000006.000 um
+2026-10-07 21:19:13  --- point dy=5000000.0 um modes=4 cell=5.00 um (40 cells) ---
+2026-10-07 21:19:52  S shape=[2, 2] diag=[0.001289, 0.002537] colsum=[0.001289, 0.002537]
+2026-10-07 21:19:52  build dy=5000000.0 um: modes=8, x span=200.000 um, centre=100.000 um, y span=5000006.000 um
+2026-10-07 21:19:52  --- point dy=5000000.0 um modes=8 cell=5.00 um (40 cells) ---
+2026-10-07 21:20:15  S shape=[2, 2] diag=[0.002739, 0.001242] colsum=[0.002741, 0.001244]
+2026-10-07 21:20:15  build dy=5000000.0 um: modes=16, x span=200.000 um, centre=100.000 um, y span=5000006.000 um
+2026-10-07 21:20:15  --- point dy=5000000.0 um modes=16 cell=5.00 um (40 cells) ---
+2026-10-07 21:20:37  S shape=[2, 2] diag=[4.8e-05, 4e-06] colsum=[0.000273, 0.00023]
+2026-10-07 21:20:37  build dy=5000000.0 um: modes=24, x span=200.000 um, centre=100.000 um, y span=5000006.000 um
+2026-10-07 21:20:37  --- point dy=5000000.0 um modes=24 cell=5.00 um (40 cells) ---
+2026-10-07 21:21:40  S shape=[2, 2] diag=[0.000199, 7.8e-05] colsum=[0.002193, 0.002072]
+2026-10-07 21:21:40  build dy=5000000.0 um: modes=32, x span=200.000 um, centre=100.000 um, y span=5000006.000 um
+2026-10-07 21:21:40  --- point dy=5000000.0 um modes=32 cell=5.00 um (40 cells) ---
+2026-10-07 21:22:17  S shape=[2, 2] diag=[0.00353, 4e-06] colsum=[0.014828, 0.011303]
+2026-10-07 21:22:17  build dy=5000000.0 um: modes=48, x span=200.000 um, centre=100.000 um, y span=5000006.000 um
+2026-10-07 21:22:17  --- point dy=5000000.0 um modes=48 cell=5.00 um (40 cells) ---
+2026-10-07 21:23:13  S shape=[2, 2] diag=[0.000265, 0.000508] colsum=[0.653342, 0.653586]
+2026-10-07 21:23:13  wrote probe_results.json
+2026-10-07 21:23:55  build dy=0.0 um: modes=2, x span=200.000 um, centre=100.000 um, y span=6.000 um
+2026-10-07 21:23:55  --- point dy=0.0 um modes=2 cell=5.00 um (40 cells) ---
+2026-10-07 21:24:02  S shape=[2, 2] diag=[0.0, 0.0] colsum=[1.0, 1.0]
+2026-10-07 21:24:02  build dy=0.0 um: modes=24, x span=200.000 um, centre=100.000 um, y span=6.000 um
+2026-10-07 21:24:02  --- point dy=0.0 um modes=24 cell=5.00 um (40 cells) ---
+2026-10-07 21:24:24  S shape=[2, 2] diag=[0.0, 0.0] colsum=[1.0, 1.0]
+2026-10-07 21:24:24  build dy=5.0 um: modes=2, x span=200.000 um, centre=100.000 um, y span=11.000 um
+2026-10-07 21:24:24  --- point dy=5.0 um modes=2 cell=5.00 um (40 cells) ---
+2026-10-07 21:24:38  S shape=[2, 2] diag=[0.009006, 0.009006] colsum=[0.009006, 0.009006]
+2026-10-07 21:24:38  build dy=5.0 um: modes=4, x span=200.000 um, centre=100.000 um, y span=11.000 um
+2026-10-07 21:24:38  --- point dy=5.0 um modes=4 cell=5.00 um (40 cells) ---
+2026-10-07 21:25:00  S shape=[2, 2] diag=[0.003018, 0.003018] colsum=[0.003018, 0.003018]
+2026-10-07 21:25:00  build dy=5.0 um: modes=8, x span=200.000 um, centre=100.000 um, y span=11.000 um
+2026-10-07 21:25:00  --- point dy=5.0 um modes=8 cell=5.00 um (40 cells) ---
+2026-10-07 21:25:16  S shape=[2, 2] diag=[0.054916, 0.054916] colsum=[0.054922, 0.054922]
+2026-10-07 21:25:16  build dy=5.0 um: modes=16, x span=200.000 um, centre=100.000 um, y span=11.000 um
+2026-10-07 21:25:16  --- point dy=5.0 um modes=16 cell=5.00 um (40 cells) ---
+2026-10-07 21:25:34  S shape=[2, 2] diag=[0.023302, 0.023302] colsum=[0.023316, 0.023316]
+2026-10-07 21:25:34  build dy=5.0 um: modes=24, x span=200.000 um, centre=100.000 um, y span=11.000 um
+2026-10-07 21:25:34  --- point dy=5.0 um modes=24 cell=5.00 um (40 cells) ---
+2026-10-07 21:25:57  S shape=[2, 2] diag=[0.020489, 0.020489] colsum=[0.020635, 0.020635]
+2026-10-07 21:25:57  build dy=5.0 um: modes=32, x span=200.000 um, centre=100.000 um, y span=11.000 um
+2026-10-07 21:25:57  --- point dy=5.0 um modes=32 cell=5.00 um (40 cells) ---
+2026-10-07 21:26:26  S shape=[2, 2] diag=[0.046482, 0.046482] colsum=[0.050669, 0.050669]
+2026-10-07 21:26:26  build dy=5.0 um: modes=48, x span=200.000 um, centre=100.000 um, y span=11.000 um
+2026-10-07 21:26:26  --- point dy=5.0 um modes=48 cell=5.00 um (40 cells) ---
+2026-10-07 21:27:10  S shape=[2, 2] diag=[0.053389, 0.053389] colsum=[0.053891, 0.053891]
+2026-10-07 21:27:10  wrote probe_results.json

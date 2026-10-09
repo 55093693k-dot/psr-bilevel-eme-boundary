@@ -1,0 +1,19 @@
+Traceback (most recent call last):
+  File "C:\Users\55093\.cline\data\workspaces\chat\min_sbend_eme\run_min_sbend_eme.py", line 219, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "C:\Users\55093\.cline\data\workspaces\chat\min_sbend_eme\run_min_sbend_eme.py", line 196, in main
+    mode = lumapi.MODE(hide=False)
+  File "C:\Users\55093\miniconda3\Lib\site-packages\ansys\api\lumerical\lumapi.py", line 2036, in __init__
+    super(MODE, self).__init__('mode', filename, key, hide, serverArgs, remoteArgs, **kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\55093\miniconda3\Lib\site-packages\ansys\api\lumerical\lumapi.py", line 1411, in __init__
+    iapi = initLib(remoteArgs)
+  File "C:\Users\55093\miniconda3\Lib\site-packages\ansys\api\lumerical\lumapi.py", line 226, in initLib
+    iapi = CDLL(InteropPaths.INTEROPLIB)
+  File "C:\Users\55093\miniconda3\Lib\ctypes\__init__.py", line 361, in __init__
+    self._handle = self._load_library(name, mode, handle, winmode)
+                   ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\55093\miniconda3\Lib\ctypes\__init__.py", line 379, in _load_library
+    return _LoadLibrary(self._name, winmode)
+OSError: [WinError 14001] 因為應用程式的並列設定不正確，所以無法啟動。如需詳細資訊，請參閱應用程式事件記錄檔，或使用命令列工具 sxstrace.exe。

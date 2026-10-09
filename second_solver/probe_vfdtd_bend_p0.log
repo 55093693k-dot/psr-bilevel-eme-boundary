@@ -1,0 +1,14 @@
+Insufficient FlexNet Publisher (FNP) license count of HPC Parallel are available for use, only 4 of the requested 8 tasks were available after using the 4 cores included with feature HPC_PARALLEL.
+License server system does not support this version of this feature.
+Feature:       anshpc
+License path:  1055@localhost;
+FlexNet Licensing error:-25,147
+
+Unable to checkout the requested HPC license.
+Insufficient FlexNet Publisher (FNP) license count of HPC Parallel are available for use, only 4 of the requested 8 tasks were available after using the 4 cores included with feature HPC_PARALLEL.
+License server system does not support this version of this feature.
+Feature:       anshpc
+License path:  1055@localhost;
+FlexNet Licensing error:-25,147
+
+Error: there was a failure with the license. Process number: 0 had this error

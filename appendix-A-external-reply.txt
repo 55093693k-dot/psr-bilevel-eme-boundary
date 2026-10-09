@@ -1,0 +1,76 @@
+Appendix A -- the external reply, quoted
+
+Source: public discussion thread 3391, Flexcompute Tidy3D
+        https://github.com/flexcompute/tidy3d/discussions/3391
+
+The text below is the reviewer's reply, reproduced with its technical content unchanged and without
+omission. The only edits are the glyph transliterations that pdfLaTeX needs (u for micro, >= and <= for
+the inequality signs, -> for the arrows, - for dashes) and the re-setting of the two tables as plain text.
+It is the reviewer's text, not our measurement.
+
+--- begin quoted reply ---
+
+Thanks again for this. A few points from what I can tell (AI helped with the runs and diagnosis):
+
+FDTD:
+
+1. For better accuracy, the FDTD simulation should use use_colocated_integration=False on the ModeSource
+and on the ModeMonitor, instead of the default True. It should also use colocate=False on the ModeMonitor.
+With this (plus shutoff=1e-4 from the next point), we get 0.998 instead of your 0.9835 for TM0 -> TE1 in
+your repo's taper FDTD. @momchil-flex the default is historical and maybe we should change it.
+
+2. Your simulation has dispersive media extending into PML and is almost unstable. You can increase
+shutoff to 1e-4 or try non-dispersive background or absorber boundaries if this becomes an issue.
+
+EME:
+
+1. You may need more EME cells to avoid staircasing scattering at cell interfaces (see the second table
+below). Converged, the coupler loses very little: in the PEC model the guided-mode sum goes to 1.00000
+(second table), and an FDTD of the coupler segment, which lets radiation escape, gives about 6e-4 through
+the side walls at 1.55 um (< 0.003 dB), part of it from the abrupt start of the lower arm at x = 105 um.
+
+2. The radiation modes are included in the port modes, so to properly check loss we should just sum over
+guided modes. The rigorous condition is Re(n_complex) > n_clad and Im(n_complex) small, but you should
+inspect the modes and eigenvalues to see if some tolerance is needed. With 4-6 modes, all output port
+modes are guided, so the guided sum equals the full column sum and we can't see radiation, just truncation
+error.
+
+3. It is possible to use PML instead of the default PEC, via EMEModeSpec.num_pml, although this can cause
+some other issues. If you did use PML, you would keep it decently far into the cladding, use
+increasing_mode_tolerance = 1e-5 (we should change the default which is too small), and still read the loss
+as 1 - guided power - reflected guided power, since interpretation of amplitudes of pml modes is a bit
+tricky. We also set EMEModeSpec.target_neff = 2.16 with >= 20 modes to prevent the PML modes from pushing
+the guided modes out of the basis.
+
+4. You can use constraint="passive" usually, although the constraint should not matter so much here, None
+should be fine too if it's converged.
+
+5. Your all-device 0.14% and the unitary/passive gap come from the 5 um straight cells through the
+S-bends: each cell boundary shifts an arm sideways by up to ~0.5 um, so the bends are badly
+under-resolved, and the constraint only decides where the scattered power goes. Straight cells are a poor
+way to model bends. Instead, set EMEModeSpec.bend_radius (with bend_axis) per cell on a flattened
+geometry: one cell per arc (+R, then -R; a constant-radius arc is uniform in the bent frame), plus straight
+cells for the straight parts. Because the two arms bend at different positions and in different
+directions, model each arm in its own simulation, starting at the end of the coupler where the arms are
+decoupled. Done this way, the S-bends lose <= 3e-5 (TE0 -> TE0 >= 0.99997 in both arms over 1.50-1.58 um,
+unchanged from 20 to 40 modes).
+
+your coupler and settings (PEC mode planes), 1.55 um, TE1 input
+
+Port modes             4        6        20       40       80
+TE1 -> lower-arm TE0   0.99525  0.99233  0.99162  0.99106  0.98966
+TE0 -> upper-arm TE0   0.99807  0.99805  0.99788  0.99785  0.99775
+Guided-mode sum        0.99996  0.99996  0.99918  0.99859  0.99719
+
+Guided-mode sum is for the TE1 input column only; at 4-6 modes all output modes are guided, so it equals
+your TE1 column sum (0.99996 in your run notes). The min/mean in your table are over all inputs.
+
+same coupler and settings, only the coupler cell length changed; 20 modes (at 0.31 um, 60 modes agree to
+1e-6)
+
+Coupler cells             5 um (yours)  1 um     0.62 um  0.31 um
+TE1 -> lower-arm TE0      0.99162       0.99870  0.99873  0.99875
+TE0 -> upper-arm TE0      0.99788       0.99999  1.00000  1.00000
+Guided-mode sum (TE1 in)  0.99918       0.99998  1.00000  1.00000
+
+--- end quoted reply ---

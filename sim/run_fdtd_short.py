@@ -32,10 +32,12 @@ common = dict(
     structures=rbp.make_structures(P),
     boundary_spec=td.BoundarySpec.all_sides(boundary=td.PML()),
     medium=td.material_library["SiO2"]["Palik_Lossless"],
-    run_time=3.6e-12,          # 约束：L=109 µm, ng≈4.5 -> t_transit≈1.6 ps，run_time ≥ 2×
+    run_time=3.6e-12,
+    shutoff=1e-4,               # 2026-10-04 厂商工程师建议（色散材料伸入 PML 接近不稳；默认 1e-5 太紧）          # 约束：L=109 µm, ng≈4.5 -> t_transit≈1.6 ps，run_time ≥ 2×
 )
 mon = td.ModeMonitor(center=(X_MON, 0.0, 0.11), size=(0.0, Y_SPAN, Z_SPAN),
-                     freqs=[freq], mode_spec=td.ModeSpec(num_modes=2), name="taper_out")
+                     freqs=[freq], mode_spec=td.ModeSpec(num_modes=2), name="taper_out",
+                     use_colocated_integration=False, colocate=False)
 
 
 def build(idx):
@@ -43,6 +45,7 @@ def build(idx):
         center=(X_IN, 0.0, 0.11), size=(0.0, Y_SPAN, Z_SPAN), direction="+",
         source_time=td.GaussianPulse(freq0=freq, fwidth=freq / 12),
         mode_spec=td.ModeSpec(num_modes=2), mode_index=idx,
+        use_colocated_integration=False,
     )
     return td.Simulation(center=((X0 + X1) / 2, 0.0, 0.0), size=(X1 - X0, Y_SPAN, Z_SPAN),
                          sources=[src], monitors=[mon], **common)

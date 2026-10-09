@@ -1,0 +1,578 @@
+2026-10-07 18:21:57  opening MODE session
+2026-10-07 18:22:44  reusing an existing MODE session handle
+2026-10-07 18:22:59  reusing an existing MODE session handle
+2026-10-07 18:25:07  reusing an existing MODE session handle
+2026-10-07 18:25:07  strip try: add2dpoly(vertices=...)    FAIL: Type added by 'add2dpoly' doesn't have 'z_span' property
+2026-10-07 18:25:07  strip try: addpoly(vertices=...)      FAIL: Type added by 'addpoly' doesn't have 'vertices' property
+2026-10-07 18:25:08  setnamed(poly, vertices) FAIL: 'Unsupported data type'
+2026-10-07 18:25:08  setnamed(polygon, vertices) FAIL: 'Unsupported data type'
+2026-10-07 18:25:08  setnamed(2D polygon, vertices) FAIL: 'Unsupported data type'
+2026-10-07 18:25:08  setnamed(2D Poly, vertices) FAIL: 'Unsupported data type'
+2026-10-07 18:25:08  setnamed(poly_strip, vertices) FAIL: 'Unsupported data type'
+2026-10-07 18:25:25  reusing an existing MODE session handle
+2026-10-07 18:25:39  reusing an existing MODE session handle
+2026-10-07 18:26:04  reusing an existing MODE session handle
+2026-10-07 18:26:04  vertices via nested list  FAIL: "in setnamed, no items matching the name 'poly' can be found."
+2026-10-07 18:26:04  vertices via numpy array  FAIL: "in setnamed, no items matching the name 'poly' can be found."
+2026-10-07 18:26:04  Si strip: None (802 vertices)
+2026-10-07 18:26:19  reusing an existing MODE session handle
+2026-10-07 18:26:19  polygon auto-name: polygon
+2026-10-07 18:26:19  vertices via nested list  FAIL: "in setnamed, the value supplied is the wrong type for the property 'v
+2026-10-07 18:26:19  Si strip: setnamed(polygon, vertices) via numpy array (802 vertices)
+2026-10-07 18:26:36  reusing an existing MODE session handle
+2026-10-07 18:26:36  polygon auto-name: polygon
+2026-10-07 18:26:36  vertices via nested list  FAIL: "in setnamed, the value supplied is the wrong type for the property 'v
+2026-10-07 18:26:36  Si strip: setnamed(polygon, vertices) via numpy array (802 vertices)
+2026-10-07 18:29:43  reusing an existing MODE session handle
+2026-10-07 18:29:43  polygon auto-name: polygon
+2026-10-07 18:29:43  vertices via nested list  FAIL: "in setnamed, the value supplied is the wrong type for the property 'v
+2026-10-07 18:29:43  Si strip: setnamed(polygon, vertices) via numpy array (802 vertices)
+2026-10-07 18:29:43  port name try port_3                   FAIL: "in setnamed, no items matching the name 'port_3' can be fou
+2026-10-07 18:29:43  port name try EME::port_3              FAIL: "in setnamed, no items matching the name 'EME::port_3' can b
+2026-10-07 18:29:43  port name try ::model::EME::port_3     FAIL: "in setnamed, no items matching the name '::model::EME::port
+2026-10-07 18:29:43  port at x=0.0 um placed via attribute assignment on the handle
+2026-10-07 18:29:43  port name try port_4                   FAIL: "in setnamed, no items matching the name 'port_4' can be fou
+2026-10-07 18:29:43  port name try EME::port_4              FAIL: "in setnamed, no items matching the name 'EME::port_4' can b
+2026-10-07 18:29:43  port name try ::model::EME::port_4     FAIL: "in setnamed, no items matching the name '::model::EME::port
+2026-10-07 18:29:43  port at x=200.0 um placed via attribute assignment on the handle
+2026-10-07 18:29:43  EME: 2 modes per cell group; ports at x=0 and x=200.0 um
+2026-10-07 18:29:43  geometry built: Si strip 802 vertices (200.0 um total), EME + 2 ports
+2026-10-07 18:29:59  reusing an existing MODE session handle
+2026-10-07 18:29:59  polygon auto-name: polygon
+2026-10-07 18:29:59  vertices via nested list  FAIL: "in setnamed, the value supplied is the wrong type for the property 'v
+2026-10-07 18:29:59  Si strip: setnamed(polygon, vertices) via numpy array (802 vertices)
+2026-10-07 18:29:59  port name try port_3                   FAIL: "in setnamed, no items matching the name 'port_3' can be fou
+2026-10-07 18:29:59  port name try EME::port_3              FAIL: "in setnamed, no items matching the name 'EME::port_3' can b
+2026-10-07 18:29:59  port name try ::model::EME::port_3     FAIL: "in setnamed, no items matching the name '::model::EME::port
+2026-10-07 18:29:59  port at x=0.0 um placed via attribute assignment on the handle
+2026-10-07 18:29:59  port name try port_4                   FAIL: "in setnamed, no items matching the name 'port_4' can be fou
+2026-10-07 18:29:59  port name try EME::port_4              FAIL: "in setnamed, no items matching the name 'EME::port_4' can b
+2026-10-07 18:29:59  port name try ::model::EME::port_4     FAIL: "in setnamed, no items matching the name '::model::EME::port
+2026-10-07 18:29:59  port at x=200.0 um placed via attribute assignment on the handle
+2026-10-07 18:29:59  EME: 2 modes per cell group; ports at x=0 and x=200.0 um
+2026-10-07 18:29:59  geometry built: Si strip 802 vertices (200.0 um total), EME + 2 ports
+2026-10-07 18:29:59  resource try: setresource(prop, value, solver='MODE')          FAIL: 'Invalid solver specified'
+2026-10-07 18:29:59  resource try: setresource(prop, value)                         FAIL: 'Invalid solver specified'
+2026-10-07 18:29:59  resource try: setresource(solver='MODE', prop, value)          FAIL: 'Invalid solver specified'
+2026-10-07 18:29:59  resource try: setresource(prop, value, solver='eme')           FAIL: 'Invalid solver specified'
+2026-10-07 18:29:59  resource try: setresource(prop, value, solver='FDTD')          FAIL: 'Invalid solver specified'
+2026-10-07 18:29:59  resource try: setresource(prop='threads', value=4, solver='MODE') FAIL: 'Invalid solver specified'
+2026-10-07 18:29:59  --- point cell=5.00 um (40 cells) ---
+2026-10-07 18:30:02  propagate refused: 'emepropagate cannot be used while in layout mode.'
+2026-10-07 18:30:02  --- point cell=2.50 um (80 cells) ---
+2026-10-07 18:30:04  propagate refused: 'emepropagate cannot be used while in layout mode.'
+2026-10-07 18:30:04  --- point cell=1.00 um (200 cells) ---
+2026-10-07 18:30:06  propagate refused: 'emepropagate cannot be used while in layout mode.'
+2026-10-07 18:30:06  wrote results.json / results.csv in C:\Users\55093\.cline\data\workspaces\chat\min_sbend_eme
+2026-10-07 18:30:47  reusing an existing MODE session handle
+2026-10-07 18:30:47  polygon auto-name: polygon
+2026-10-07 18:30:47  vertices via nested list  FAIL: "in setnamed, the value supplied is the wrong type for the property 'v
+2026-10-07 18:30:47  Si strip: setnamed(polygon, vertices) via numpy array (802 vertices)
+2026-10-07 18:30:47  port name try port_3                   FAIL: "in setnamed, no items matching the name 'port_3' can be fou
+2026-10-07 18:30:47  port name try EME::port_3              FAIL: "in setnamed, no items matching the name 'EME::port_3' can b
+2026-10-07 18:30:47  port name try ::model::EME::port_3     FAIL: "in setnamed, no items matching the name '::model::EME::port
+2026-10-07 18:30:47  port at x=0.0 um placed via attribute assignment on the handle
+2026-10-07 18:30:47  port name try port_4                   FAIL: "in setnamed, no items matching the name 'port_4' can be fou
+2026-10-07 18:30:47  port name try EME::port_4              FAIL: "in setnamed, no items matching the name 'EME::port_4' can b
+2026-10-07 18:30:47  port name try ::model::EME::port_4     FAIL: "in setnamed, no items matching the name '::model::EME::port
+2026-10-07 18:30:47  port at x=200.0 um placed via attribute assignment on the handle
+2026-10-07 18:30:47  EME: 2 modes per cell group; ports at x=0 and x=200.0 um
+2026-10-07 18:30:47  geometry built: Si strip 802 vertices (200.0 um total), EME + 2 ports
+2026-10-07 18:30:47  resource try: setresource(prop, value, solver='MODE')              FAIL: 'Invalid solver specified'
+2026-10-07 18:30:47  resource try: setresource(prop, value, solver='mode')              FAIL: 'Invalid solver specified'
+2026-10-07 18:30:47  resource try: setresource(prop, value, solver='Lumerical')         FAIL: 'Invalid solver specified'
+2026-10-07 18:30:47  resource try: setresource(prop, value, solver='lumerical')         FAIL: 'Invalid solver specified'
+2026-10-07 18:30:47  resource try: setresource(prop, value)                             FAIL: 'Invalid solver specified'
+2026-10-07 18:30:47  resource try: setresource(solver='MODE', prop, value)              FAIL: 'Invalid solver specified'
+2026-10-07 18:30:47  resource try: setresource(solver='mode', prop, value)              FAIL: 'Invalid solver specified'
+2026-10-07 18:30:47  resource try: setresource(prop, value, solver='eme')               FAIL: 'Invalid solver specified'
+2026-10-07 18:30:47  resource try: setresource(prop, value, solver='FDTD')              FAIL: 'Invalid solver specified'
+2026-10-07 18:30:47  resource try: setresource(prop='threads', value=4, solver='MODE')  FAIL: 'Invalid solver specified'
+2026-10-07 18:30:47  resource try: setresource(prop='threads', value=4, solver='mode')  FAIL: 'Invalid solver specified'
+2026-10-07 18:30:47  resource try: getresource('processes','MODE')                      FAIL: 'Invalid solver specified'
+2026-10-07 18:30:47  resource try: getresource('processes','mode')                      FAIL: 'Invalid solver specified'
+2026-10-07 18:30:47  --- point cell=5.00 um (40 cells) ---
+2026-10-07 18:30:49  propagate refused: 'emepropagate cannot be used while in layout mode.'
+2026-10-07 18:30:49  --- point cell=2.50 um (80 cells) ---
+2026-10-07 18:30:51  propagate refused: 'emepropagate cannot be used while in layout mode.'
+2026-10-07 18:30:51  --- point cell=1.00 um (200 cells) ---
+2026-10-07 18:30:53  propagate refused: 'emepropagate cannot be used while in layout mode.'
+2026-10-07 18:30:53  wrote results.json / results.csv in C:\Users\55093\.cline\data\workspaces\chat\min_sbend_eme
+2026-10-07 18:44:47  reusing an existing MODE session handle
+2026-10-07 18:44:48  polygon auto-name: polygon
+2026-10-07 18:44:48  vertices via nested list  FAIL: "in setnamed, the value supplied is the wrong type for the property 'v
+2026-10-07 18:44:48  Si strip: setnamed(polygon, vertices) via numpy array (802 vertices)
+2026-10-07 18:44:48  port name try port_3                   FAIL: "in setnamed, no items matching the name 'port_3' can be fou
+2026-10-07 18:44:48  port name try EME::port_3              FAIL: "in setnamed, no items matching the name 'EME::port_3' can b
+2026-10-07 18:44:48  port name try ::model::EME::port_3     FAIL: "in setnamed, no items matching the name '::model::EME::port
+2026-10-07 18:44:48  port at x=0.0 um placed via attribute assignment on the handle
+2026-10-07 18:44:48  port name try port_4                   FAIL: "in setnamed, no items matching the name 'port_4' can be fou
+2026-10-07 18:44:48  port name try EME::port_4              FAIL: "in setnamed, no items matching the name 'EME::port_4' can b
+2026-10-07 18:44:48  port name try ::model::EME::port_4     FAIL: "in setnamed, no items matching the name '::model::EME::port
+2026-10-07 18:44:48  port at x=200.0 um placed via attribute assignment on the handle
+2026-10-07 18:44:48  EME: 2 modes per cell group; ports at x=0 and x=200.0 um
+2026-10-07 18:44:48  geometry built: Si strip 802 vertices (200.0 um total), EME + 2 ports
+2026-10-07 18:44:48  resource try: setresource(prop, value, solver='MODE')              FAIL: 'Invalid solver specified'
+2026-10-07 18:44:48  resource try: setresource(prop, value, solver='mode')              FAIL: 'Invalid solver specified'
+2026-10-07 18:44:48  resource try: setresource(prop, value, solver='Lumerical')         FAIL: 'Invalid solver specified'
+2026-10-07 18:44:48  resource try: setresource(prop, value, solver='lumerical')         FAIL: 'Invalid solver specified'
+2026-10-07 18:44:48  resource try: setresource(prop, value)                             FAIL: 'Invalid solver specified'
+2026-10-07 18:44:48  resource try: setresource(solver='MODE', prop, value)              FAIL: 'Invalid solver specified'
+2026-10-07 18:44:48  resource try: setresource(solver='mode', prop, value)              FAIL: 'Invalid solver specified'
+2026-10-07 18:44:48  resource try: setresource(prop, value, solver='eme')               FAIL: 'Invalid solver specified'
+2026-10-07 18:44:48  resource try: setresource(prop, value, solver='FDTD')              FAIL: 'Invalid solver specified'
+2026-10-07 18:44:48  resource try: setresource(prop='threads', value=4, solver='MODE')  FAIL: 'Invalid solver specified'
+2026-10-07 18:44:48  resource try: setresource(prop='threads', value=4, solver='mode')  FAIL: 'Invalid solver specified'
+2026-10-07 18:44:48  resource try: getresource('processes','MODE')                      FAIL: 'Invalid solver specified'
+2026-10-07 18:44:48  resource try: getresource('processes','mode')                      FAIL: 'Invalid solver specified'
+2026-10-07 18:44:48  --- point cell=5.00 um (40 cells) ---
+2026-10-07 18:45:03  getresult refused: "Can not find result 'S' in the result provider 'EME'"
+2026-10-07 18:45:04  --- point cell=2.50 um (80 cells) ---
+2026-10-07 18:45:20  getresult refused: "Can not find result 'S' in the result provider 'EME'"
+2026-10-07 18:45:20  --- point cell=1.00 um (200 cells) ---
+2026-10-07 18:45:46  getresult refused: "Can not find result 'S' in the result provider 'EME'"
+2026-10-07 18:45:46  wrote results.json / results.csv in C:\Users\55093\.cline\data\workspaces\chat\min_sbend_eme
+2026-10-07 18:46:03  reusing an existing MODE session handle
+2026-10-07 18:46:03  polygon auto-name: polygon
+2026-10-07 18:46:03  vertices via nested list  FAIL: "in setnamed, the value supplied is the wrong type for the property 'v
+2026-10-07 18:46:03  Si strip: setnamed(polygon, vertices) via numpy array (802 vertices)
+2026-10-07 18:46:03  port name try port_3                   FAIL: "in setnamed, no items matching the name 'port_3' can be fou
+2026-10-07 18:46:03  port name try EME::port_3              FAIL: "in setnamed, no items matching the name 'EME::port_3' can b
+2026-10-07 18:46:03  port name try ::model::EME::port_3     FAIL: "in setnamed, no items matching the name '::model::EME::port
+2026-10-07 18:46:03  port at x=0.0 um placed via attribute assignment on the handle
+2026-10-07 18:46:03  port name try port_4                   FAIL: "in setnamed, no items matching the name 'port_4' can be fou
+2026-10-07 18:46:03  port name try EME::port_4              FAIL: "in setnamed, no items matching the name 'EME::port_4' can b
+2026-10-07 18:46:03  port name try ::model::EME::port_4     FAIL: "in setnamed, no items matching the name '::model::EME::port
+2026-10-07 18:46:03  port at x=200.0 um placed via attribute assignment on the handle
+2026-10-07 18:46:03  EME: 2 modes per cell group; ports at x=0 and x=200.0 um
+2026-10-07 18:46:03  geometry built: Si strip 802 vertices (200.0 um total), EME + 2 ports
+2026-10-07 18:46:03  resource try: setresource(prop, value, solver='MODE')              FAIL: 'Invalid solver specified'
+2026-10-07 18:46:03  resource try: setresource(prop, value, solver='mode')              FAIL: 'Invalid solver specified'
+2026-10-07 18:46:03  resource try: setresource(prop, value, solver='Lumerical')         FAIL: 'Invalid solver specified'
+2026-10-07 18:46:03  resource try: setresource(prop, value, solver='lumerical')         FAIL: 'Invalid solver specified'
+2026-10-07 18:46:03  resource try: setresource(prop, value)                             FAIL: 'Invalid solver specified'
+2026-10-07 18:46:03  resource try: setresource(solver='MODE', prop, value)              FAIL: 'Invalid solver specified'
+2026-10-07 18:46:03  resource try: setresource(solver='mode', prop, value)              FAIL: 'Invalid solver specified'
+2026-10-07 18:46:03  resource try: setresource(prop, value, solver='eme')               FAIL: 'Invalid solver specified'
+2026-10-07 18:46:03  resource try: setresource(prop, value, solver='FDTD')              FAIL: 'Invalid solver specified'
+2026-10-07 18:46:03  resource try: setresource(prop='threads', value=4, solver='MODE')  FAIL: 'Invalid solver specified'
+2026-10-07 18:46:03  resource try: setresource(prop='threads', value=4, solver='mode')  FAIL: 'Invalid solver specified'
+2026-10-07 18:46:03  resource try: getresource('processes','MODE')                      FAIL: 'Invalid solver specified'
+2026-10-07 18:46:03  resource try: getresource('processes','mode')                      FAIL: 'Invalid solver specified'
+2026-10-07 18:46:03  --- point cell=5.00 um (40 cells) ---
+2026-10-07 18:46:17  --- point cell=2.50 um (80 cells) ---
+2026-10-07 18:46:35  --- point cell=1.00 um (200 cells) ---
+2026-10-07 18:47:02  wrote results.json / results.csv in C:\Users\55093\.cline\data\workspaces\chat\min_sbend_eme
+2026-10-07 18:47:17  reusing an existing MODE session handle
+2026-10-07 18:47:17  polygon auto-name: polygon
+2026-10-07 18:47:17  vertices via nested list  FAIL: "in setnamed, the value supplied is the wrong type for the property 'v
+2026-10-07 18:47:17  Si strip: setnamed(polygon, vertices) via numpy array (802 vertices)
+2026-10-07 18:47:17  port name try port_3                   FAIL: "in setnamed, no items matching the name 'port_3' can be fou
+2026-10-07 18:47:17  port name try EME::port_3              FAIL: "in setnamed, no items matching the name 'EME::port_3' can b
+2026-10-07 18:47:17  port name try ::model::EME::port_3     FAIL: "in setnamed, no items matching the name '::model::EME::port
+2026-10-07 18:47:17  port at x=0.0 um placed via attribute assignment on the handle
+2026-10-07 18:47:17  port name try port_4                   FAIL: "in setnamed, no items matching the name 'port_4' can be fou
+2026-10-07 18:47:17  port name try EME::port_4              FAIL: "in setnamed, no items matching the name 'EME::port_4' can b
+2026-10-07 18:47:17  port name try ::model::EME::port_4     FAIL: "in setnamed, no items matching the name '::model::EME::port
+2026-10-07 18:47:17  port at x=200.0 um placed via attribute assignment on the handle
+2026-10-07 18:47:17  EME: 2 modes per cell group; ports at x=0 and x=200.0 um
+2026-10-07 18:47:17  geometry built: Si strip 802 vertices (200.0 um total), EME + 2 ports
+2026-10-07 18:47:17  resource try: setresource(prop, value, solver='MODE')              FAIL: 'Invalid solver specified'
+2026-10-07 18:47:17  resource try: setresource(prop, value, solver='mode')              FAIL: 'Invalid solver specified'
+2026-10-07 18:47:17  resource try: setresource(prop, value, solver='Lumerical')         FAIL: 'Invalid solver specified'
+2026-10-07 18:47:17  resource try: setresource(prop, value, solver='lumerical')         FAIL: 'Invalid solver specified'
+2026-10-07 18:47:17  resource try: setresource(prop, value)                             FAIL: 'Invalid solver specified'
+2026-10-07 18:47:17  resource try: setresource(solver='MODE', prop, value)              FAIL: 'Invalid solver specified'
+2026-10-07 18:47:17  resource try: setresource(solver='mode', prop, value)              FAIL: 'Invalid solver specified'
+2026-10-07 18:47:17  resource try: setresource(prop, value, solver='eme')               FAIL: 'Invalid solver specified'
+2026-10-07 18:47:17  resource try: setresource(prop, value, solver='FDTD')              FAIL: 'Invalid solver specified'
+2026-10-07 18:47:17  resource try: setresource(prop='threads', value=4, solver='MODE')  FAIL: 'Invalid solver specified'
+2026-10-07 18:47:17  resource try: setresource(prop='threads', value=4, solver='mode')  FAIL: 'Invalid solver specified'
+2026-10-07 18:47:17  resource try: getresource('processes','MODE')                      FAIL: 'Invalid solver specified'
+2026-10-07 18:47:17  resource try: getresource('processes','mode')                      FAIL: 'Invalid solver specified'
+2026-10-07 18:47:18  --- point cell=5.00 um (40 cells) ---
+2026-10-07 18:47:31  S shape=[4, 4] diag=[0.056329, 0.056329, 0.056329, 0.000131] colsum=[0.169007, 0.169007, 0.169007, 0.00019]
+2026-10-07 18:47:31  --- point cell=2.50 um (80 cells) ---
+2026-10-07 18:47:49  S shape=[4, 4] diag=[0.053633, 0.053633, 0.053633, 2.8e-05] colsum=[0.161192, 0.161192, 0.161192, 0.000908]
+2026-10-07 18:47:49  --- point cell=1.00 um (200 cells) ---
+2026-10-07 18:48:16  S shape=[4, 4] diag=[0.054844, 0.054844, 0.054844, 0.00013] colsum=[0.164716, 0.164716, 0.164716, 0.000679]
+2026-10-07 18:48:16  wrote results.json / results.csv in C:\Users\55093\.cline\data\workspaces\chat\min_sbend_eme
+2026-10-07 18:48:40  reusing an existing MODE session handle
+2026-10-07 18:48:40  polygon auto-name: polygon
+2026-10-07 18:48:40  vertices via nested list  FAIL: "in setnamed, the value supplied is the wrong type for the property 'v
+2026-10-07 18:48:40  Si strip: setnamed(polygon, vertices) via numpy array (802 vertices)
+2026-10-07 18:48:40  port name try port_3                   FAIL: "in setnamed, no items matching the name 'port_3' can be fou
+2026-10-07 18:48:40  port name try EME::port_3              FAIL: "in setnamed, no items matching the name 'EME::port_3' can b
+2026-10-07 18:48:40  port name try ::model::EME::port_3     FAIL: "in setnamed, no items matching the name '::model::EME::port
+2026-10-07 18:48:40  port at x=0.0 um placed via setattr on the handle (x, y, z, y span, z span)
+2026-10-07 18:48:40  port name try port_4                   FAIL: "in setnamed, no items matching the name 'port_4' can be fou
+2026-10-07 18:48:40  port name try EME::port_4              FAIL: "in setnamed, no items matching the name 'EME::port_4' can b
+2026-10-07 18:48:40  port name try ::model::EME::port_4     FAIL: "in setnamed, no items matching the name '::model::EME::port
+2026-10-07 18:48:40  port at x=200.0 um placed via setattr on the handle (x, y, z, y span, z span)
+2026-10-07 18:48:40  EME: 2 modes per cell group; ports at x=0 and x=200.0 um
+2026-10-07 18:48:40  geometry built: Si strip 802 vertices (200.0 um total), EME + 2 ports
+2026-10-07 18:48:40  resource try: setresource(prop, value, solver='MODE')              FAIL: 'Invalid solver specified'
+2026-10-07 18:48:40  resource try: setresource(prop, value, solver='mode')              FAIL: 'Invalid solver specified'
+2026-10-07 18:48:40  resource try: setresource(prop, value, solver='Lumerical')         FAIL: 'Invalid solver specified'
+2026-10-07 18:48:40  resource try: setresource(prop, value, solver='lumerical')         FAIL: 'Invalid solver specified'
+2026-10-07 18:48:40  resource try: setresource(prop, value)                             FAIL: 'Invalid solver specified'
+2026-10-07 18:48:40  resource try: setresource(solver='MODE', prop, value)              FAIL: 'Invalid solver specified'
+2026-10-07 18:48:40  resource try: setresource(solver='mode', prop, value)              FAIL: 'Invalid solver specified'
+2026-10-07 18:48:40  resource try: setresource(prop, value, solver='eme')               FAIL: 'Invalid solver specified'
+2026-10-07 18:48:40  resource try: setresource(prop, value, solver='FDTD')              FAIL: 'Invalid solver specified'
+2026-10-07 18:48:40  resource try: setresource(prop='threads', value=4, solver='MODE')  FAIL: 'Invalid solver specified'
+2026-10-07 18:48:40  resource try: setresource(prop='threads', value=4, solver='mode')  FAIL: 'Invalid solver specified'
+2026-10-07 18:48:40  resource try: getresource('processes','MODE')                      FAIL: 'Invalid solver specified'
+2026-10-07 18:48:40  resource try: getresource('processes','mode')                      FAIL: 'Invalid solver specified'
+2026-10-07 18:48:40  --- point cell=5.00 um (40 cells) ---
+2026-10-07 18:48:54  S shape=[4, 4] diag=[0.056329, 0.056329, 0.056329, 0.000131] colsum=[0.169007, 0.169007, 0.169007, 0.00019]
+2026-10-07 18:48:54  --- point cell=2.50 um (80 cells) ---
+2026-10-07 18:49:10  S shape=[4, 4] diag=[0.053633, 0.053633, 0.053633, 2.8e-05] colsum=[0.161192, 0.161192, 0.161192, 0.000908]
+2026-10-07 18:49:10  --- point cell=1.00 um (200 cells) ---
+2026-10-07 18:49:38  S shape=[4, 4] diag=[0.054844, 0.054844, 0.054844, 0.00013] colsum=[0.164716, 0.164716, 0.164716, 0.000679]
+2026-10-07 18:49:38  wrote results.json / results.csv in C:\Users\55093\.cline\data\workspaces\chat\min_sbend_eme
+2026-10-07 19:17:31  opening MODE session
+2026-10-07 19:17:38  polygon auto-name: polygon
+2026-10-07 19:17:38  vertices via nested list  FAIL: "in setnamed, the value supplied is the wrong type for the property 'v
+2026-10-07 19:17:38  Si strip: setnamed(polygon, vertices) via numpy array (802 vertices)
+2026-10-07 19:17:38  port name try port_3                   FAIL: "in setnamed, no items matching the name 'port_3' can be fou
+2026-10-07 19:17:38  port name try EME::port_3              FAIL: "in setnamed, no items matching the name 'EME::port_3' can b
+2026-10-07 19:17:38  port name try ::model::EME::port_3     FAIL: "in setnamed, no items matching the name '::model::EME::port
+2026-10-07 19:17:39  port at x=0.0 um placed via setattr on the handle (x, y, z, y span, z span)
+2026-10-07 19:17:39  port name try port_4                   FAIL: "in setnamed, no items matching the name 'port_4' can be fou
+2026-10-07 19:17:39  port name try EME::port_4              FAIL: "in setnamed, no items matching the name 'EME::port_4' can b
+2026-10-07 19:17:39  port name try ::model::EME::port_4     FAIL: "in setnamed, no items matching the name '::model::EME::port
+2026-10-07 19:17:39  port at x=200.0 um placed via setattr on the handle (x, y, z, y span, z span)
+2026-10-07 19:17:39  EME: 2 modes per cell group; ports at x=0 and x=200.0 um
+2026-10-07 19:17:39  geometry built: Si strip 802 vertices (200.0 um total), EME + 2 ports
+2026-10-07 19:17:39  resource try: setresource(prop, value, solver='MODE')              FAIL: 'Invalid solver specified'
+2026-10-07 19:17:39  resource try: setresource(prop, value, solver='mode')              FAIL: 'Invalid solver specified'
+2026-10-07 19:17:39  resource try: setresource(prop, value, solver='Lumerical')         FAIL: 'Invalid solver specified'
+2026-10-07 19:17:39  resource try: setresource(prop, value, solver='lumerical')         FAIL: 'Invalid solver specified'
+2026-10-07 19:17:39  resource try: setresource(prop, value)                             FAIL: 'Invalid solver specified'
+2026-10-07 19:17:39  resource try: setresource(solver='MODE', prop, value)              FAIL: 'Invalid solver specified'
+2026-10-07 19:17:39  resource try: setresource(solver='mode', prop, value)              FAIL: 'Invalid solver specified'
+2026-10-07 19:17:39  resource try: setresource(prop, value, solver='eme')               FAIL: 'Invalid solver specified'
+2026-10-07 19:17:39  resource try: setresource(prop, value, solver='FDTD')              FAIL: 'Invalid solver specified'
+2026-10-07 19:17:39  resource try: setresource(prop='threads', value=4, solver='MODE')  FAIL: 'Invalid solver specified'
+2026-10-07 19:17:39  resource try: setresource(prop='threads', value=4, solver='mode')  FAIL: 'Invalid solver specified'
+2026-10-07 19:17:39  resource try: getresource('processes','MODE')                      FAIL: 'Invalid solver specified'
+2026-10-07 19:17:39  resource try: getresource('processes','mode')                      FAIL: 'Invalid solver specified'
+2026-10-07 19:17:39  --- point cell=5.00 um (40 cells) ---
+2026-10-07 19:17:48  S shape=[4, 4] diag=[0.181375, 0.181375, 0.181375, 0.053257] colsum=[0.544125, 0.544125, 0.544125, 0.053257]
+2026-10-07 19:17:48  --- point cell=2.50 um (80 cells) ---
+2026-10-07 19:18:03  S shape=[4, 4] diag=[0.181375, 0.181375, 0.181375, 0.053257] colsum=[0.544125, 0.544125, 0.544125, 0.053257]
+2026-10-07 19:18:03  --- point cell=1.00 um (200 cells) ---
+2026-10-07 19:18:27  S shape=[4, 4] diag=[0.181375, 0.181375, 0.181375, 0.053257] colsum=[0.544125, 0.544125, 0.544125, 0.053257]
+2026-10-07 19:18:27  wrote results.json / results.csv in C:\Users\55093\.cline\data\workspaces\chat\PERSONAL_BRAND\BUILDS\min_sbend_eme
+2026-10-07 19:18:28  opening MODE session
+2026-10-07 19:18:33  polygon auto-name: polygon
+2026-10-07 19:18:33  vertices via nested list  FAIL: "in setnamed, the value supplied is the wrong type for the property 'v
+2026-10-07 19:18:33  Si strip: setnamed(polygon, vertices) via numpy array (802 vertices)
+2026-10-07 19:18:34  port name try port_3                   FAIL: "in setnamed, no items matching the name 'port_3' can be fou
+2026-10-07 19:18:34  port name try EME::port_3              FAIL: "in setnamed, no items matching the name 'EME::port_3' can b
+2026-10-07 19:18:34  port name try ::model::EME::port_3     FAIL: "in setnamed, no items matching the name '::model::EME::port
+2026-10-07 19:18:34  port at x=0.0 um placed via setattr on the handle (x, y, z, y span, z span)
+2026-10-07 19:18:34  port name try port_4                   FAIL: "in setnamed, no items matching the name 'port_4' can be fou
+2026-10-07 19:18:34  port name try EME::port_4              FAIL: "in setnamed, no items matching the name 'EME::port_4' can b
+2026-10-07 19:18:34  port name try ::model::EME::port_4     FAIL: "in setnamed, no items matching the name '::model::EME::port
+2026-10-07 19:18:34  port at x=200.0 um placed via setattr on the handle (x, y, z, y span, z span)
+2026-10-07 19:18:34  EME: 2 modes per cell group; ports at x=0 and x=200.0 um
+2026-10-07 19:18:34  geometry built: Si strip 802 vertices (200.0 um total), EME + 2 ports
+2026-10-07 19:18:34  resource try: setresource(prop, value, solver='MODE')              FAIL: 'Invalid solver specified'
+2026-10-07 19:18:34  resource try: setresource(prop, value, solver='mode')              FAIL: 'Invalid solver specified'
+2026-10-07 19:18:34  resource try: setresource(prop, value, solver='Lumerical')         FAIL: 'Invalid solver specified'
+2026-10-07 19:18:34  resource try: setresource(prop, value, solver='lumerical')         FAIL: 'Invalid solver specified'
+2026-10-07 19:18:34  resource try: setresource(prop, value)                             FAIL: 'Invalid solver specified'
+2026-10-07 19:18:34  resource try: setresource(solver='MODE', prop, value)              FAIL: 'Invalid solver specified'
+2026-10-07 19:18:34  resource try: setresource(solver='mode', prop, value)              FAIL: 'Invalid solver specified'
+2026-10-07 19:18:34  resource try: setresource(prop, value, solver='eme')               FAIL: 'Invalid solver specified'
+2026-10-07 19:18:34  resource try: setresource(prop, value, solver='FDTD')              FAIL: 'Invalid solver specified'
+2026-10-07 19:18:34  resource try: setresource(prop='threads', value=4, solver='MODE')  FAIL: 'Invalid solver specified'
+2026-10-07 19:18:34  resource try: setresource(prop='threads', value=4, solver='mode')  FAIL: 'Invalid solver specified'
+2026-10-07 19:18:34  resource try: getresource('processes','MODE')                      FAIL: 'Invalid solver specified'
+2026-10-07 19:18:34  resource try: getresource('processes','mode')                      FAIL: 'Invalid solver specified'
+2026-10-07 19:18:34  --- point cell=5.00 um (40 cells) ---
+2026-10-07 19:18:42  S shape=[4, 4] diag=[0.000978, 0.000978, 0.000978, 0.024931] colsum=[0.003517, 0.003517, 0.003517, 0.026676]
+2026-10-07 19:18:43  --- point cell=2.50 um (80 cells) ---
+2026-10-07 19:19:00  S shape=[4, 4] diag=[0.003189, 0.003189, 0.003189, 0.025764] colsum=[0.010448, 0.010448, 0.010448, 0.028403]
+2026-10-07 19:19:00  --- point cell=1.00 um (200 cells) ---
+2026-10-07 19:19:27  S shape=[4, 4] diag=[0.004305, 0.004305, 0.004305, 0.029424] colsum=[0.013132, 0.013132, 0.013132, 0.03008]
+2026-10-07 19:19:27  wrote results.json / results.csv in C:\Users\55093\.cline\data\workspaces\chat\PERSONAL_BRAND\BUILDS\min_sbend_eme
+2026-10-07 19:36:45  opening MODE session
+2026-10-07 19:36:51  polygon auto-name: polygon
+2026-10-07 19:36:51  vertices via nested list  FAIL: "in setnamed, the value supplied is the wrong type for the property 'v
+2026-10-07 19:36:51  Si strip: setnamed(polygon, vertices) via numpy array (802 vertices)
+2026-10-07 19:36:51  port name try port_3                   FAIL: "in setnamed, no items matching the name 'port_3' can be fou
+2026-10-07 19:36:51  port name try EME::port_3              FAIL: "in setnamed, no items matching the name 'EME::port_3' can b
+2026-10-07 19:36:51  port name try ::model::EME::port_3     FAIL: "in setnamed, no items matching the name '::model::EME::port
+2026-10-07 19:36:51  port at x=0.0 um placed via setattr on the handle (x, y, z, y span, z span)
+2026-10-07 19:36:51  port name try port_4                   FAIL: "in setnamed, no items matching the name 'port_4' can be fou
+2026-10-07 19:36:51  port name try EME::port_4              FAIL: "in setnamed, no items matching the name 'EME::port_4' can b
+2026-10-07 19:36:51  port name try ::model::EME::port_4     FAIL: "in setnamed, no items matching the name '::model::EME::port
+2026-10-07 19:36:51  port at x=200.0 um placed via setattr on the handle (x, y, z, y span, z span)
+2026-10-07 19:36:51  EME: 2 modes per cell group; ports at x=0 and x=200.0 um
+2026-10-07 19:36:51  geometry built: Si strip 802 vertices (200.0 um total), EME + 2 ports
+2026-10-07 19:36:51  resource try: setresource(prop, value, solver='MODE')              FAIL: 'Invalid solver specified'
+2026-10-07 19:36:51  resource try: setresource(prop, value, solver='mode')              FAIL: 'Invalid solver specified'
+2026-10-07 19:36:51  resource try: setresource(prop, value, solver='Lumerical')         FAIL: 'Invalid solver specified'
+2026-10-07 19:36:51  resource try: setresource(prop, value, solver='lumerical')         FAIL: 'Invalid solver specified'
+2026-10-07 19:36:51  resource try: setresource(prop, value)                             FAIL: 'Invalid solver specified'
+2026-10-07 19:36:51  resource try: setresource(solver='MODE', prop, value)              FAIL: 'Invalid solver specified'
+2026-10-07 19:36:51  resource try: setresource(solver='mode', prop, value)              FAIL: 'Invalid solver specified'
+2026-10-07 19:36:51  resource try: setresource(prop, value, solver='eme')               FAIL: 'Invalid solver specified'
+2026-10-07 19:36:51  resource try: setresource(prop, value, solver='FDTD')              FAIL: 'Invalid solver specified'
+2026-10-07 19:36:51  resource try: setresource(prop='threads', value=4, solver='MODE')  FAIL: 'Invalid solver specified'
+2026-10-07 19:36:51  resource try: setresource(prop='threads', value=4, solver='mode')  FAIL: 'Invalid solver specified'
+2026-10-07 19:36:51  resource try: getresource('processes','MODE')                      FAIL: 'Invalid solver specified'
+2026-10-07 19:36:51  resource try: getresource('processes','mode')                      FAIL: 'Invalid solver specified'
+2026-10-07 19:36:51  --- point cell=5.00 um (40 cells) ---
+2026-10-07 19:36:59  S shape=[4, 4] diag=[0.181375, 0.181375, 0.181375, 0.053257] colsum=[0.544125, 0.544125, 0.544125, 0.053257]
+2026-10-07 19:37:00  --- point cell=2.50 um (80 cells) ---
+2026-10-07 19:38:02  S shape=[4, 4] diag=[0.181375, 0.181375, 0.181375, 0.053257] colsum=[0.544125, 0.544125, 0.544125, 0.053257]
+2026-10-07 19:38:02  --- point cell=1.00 um (200 cells) ---
+2026-10-07 19:38:26  S shape=[4, 4] diag=[0.181375, 0.181375, 0.181375, 0.053257] colsum=[0.544125, 0.544125, 0.544125, 0.053257]
+2026-10-07 19:38:26  wrote results.json / results.csv in C:\Users\55093\.cline\data\workspaces\chat\PERSONAL_BRAND\BUILDS\min_sbend_eme
+2026-10-07 19:43:44  opening MODE session
+2026-10-07 19:43:50  polygon auto-name: polygon
+2026-10-07 19:43:50  vertices via nested list  FAIL: "in setnamed, the value supplied is the wrong type for the property 'v
+2026-10-07 19:43:50  Si strip: setnamed(polygon, vertices) via numpy array (802 vertices)
+2026-10-07 19:43:50  ports placed by the script (select-by-creation pattern; first port at x=0, second at x=200.0 um)
+2026-10-07 19:43:50  EME: 2 modes per cell group; ports at x=0 and x=200.0 um
+2026-10-07 19:43:50  geometry built: Si strip 802 vertices (200.0 um total), EME + 2 ports
+2026-10-07 19:44:07  opening MODE session
+2026-10-07 19:44:12  polygon auto-name: polygon
+2026-10-07 19:44:12  vertices via nested list  FAIL: "in setnamed, the value supplied is the wrong type for the property 'v
+2026-10-07 19:44:12  Si strip: setnamed(polygon, vertices) via numpy array (802 vertices)
+2026-10-07 19:44:12  ports placed by the script (select-by-creation pattern; first port at x=0, second at x=200.0 um)
+2026-10-07 19:44:12  EME: 2 modes per cell group; ports at x=0 and x=200.0 um
+2026-10-07 19:44:12  geometry built: Si strip 802 vertices (200.0 um total), EME + 2 ports
+2026-10-07 19:44:12  resource try: setresource(prop, value, solver='MODE')              FAIL: 'Invalid solver specified'
+2026-10-07 19:44:12  resource try: setresource(prop, value, solver='mode')              FAIL: 'Invalid solver specified'
+2026-10-07 19:44:12  resource try: setresource(prop, value, solver='Lumerical')         FAIL: 'Invalid solver specified'
+2026-10-07 19:44:12  resource try: setresource(prop, value, solver='lumerical')         FAIL: 'Invalid solver specified'
+2026-10-07 19:44:12  resource try: setresource(prop, value)                             FAIL: 'Invalid solver specified'
+2026-10-07 19:44:12  resource try: setresource(solver='MODE', prop, value)              FAIL: 'Invalid solver specified'
+2026-10-07 19:44:12  resource try: setresource(solver='mode', prop, value)              FAIL: 'Invalid solver specified'
+2026-10-07 19:44:12  resource try: setresource(prop, value, solver='eme')               FAIL: 'Invalid solver specified'
+2026-10-07 19:44:12  resource try: setresource(prop, value, solver='FDTD')              FAIL: 'Invalid solver specified'
+2026-10-07 19:44:12  resource try: setresource(prop='threads', value=4, solver='MODE')  FAIL: 'Invalid solver specified'
+2026-10-07 19:44:12  resource try: setresource(prop='threads', value=4, solver='mode')  FAIL: 'Invalid solver specified'
+2026-10-07 19:44:12  resource try: getresource('processes','MODE')                      FAIL: 'Invalid solver specified'
+2026-10-07 19:44:12  resource try: getresource('processes','mode')                      FAIL: 'Invalid solver specified'
+2026-10-07 19:44:12  --- point cell=5.00 um (40 cells) ---
+2026-10-07 19:44:20  S shape=[4, 4] diag=[0.181375, 0.181375, 0.181375, 0.053257] colsum=[0.544125, 0.544125, 0.544125, 0.053257]
+2026-10-07 19:44:21  --- point cell=2.50 um (80 cells) ---
+2026-10-07 19:44:35  S shape=[4, 4] diag=[0.181375, 0.181375, 0.181375, 0.053257] colsum=[0.544125, 0.544125, 0.544125, 0.053257]
+2026-10-07 19:44:36  --- point cell=1.00 um (200 cells) ---
+2026-10-07 19:44:59  S shape=[4, 4] diag=[0.181375, 0.181375, 0.181375, 0.053257] colsum=[0.544125, 0.544125, 0.544125, 0.053257]
+2026-10-07 19:44:59  wrote results.json / results.csv in C:\Users\55093\.cline\data\workspaces\chat\PERSONAL_BRAND\BUILDS\min_sbend_eme
+2026-10-07 19:46:34  polygon auto-name: polygon
+2026-10-07 19:46:34  vertices via nested list  FAIL: "in setnamed, the value supplied is the wrong type for the property 'v
+2026-10-07 19:46:34  Si strip: setnamed(polygon, vertices) via numpy array (802 vertices)
+2026-10-07 19:46:34  ports placed by the script (select-by-creation pattern; first port at x=0, second at x=200.0 um)
+2026-10-07 19:46:34  EME: 2 modes per cell group; ports at x=0 and x=200.0 um
+2026-10-07 19:46:34  geometry built: Si strip 802 vertices (200.0 um total), EME + 2 ports
+2026-10-07 19:46:37  polygon auto-name: polygon
+2026-10-07 19:46:37  vertices via nested list  FAIL: "in setnamed, the value supplied is the wrong type for the property 'v
+2026-10-07 19:46:37  Si strip: setnamed(polygon, vertices) via numpy array (802 vertices)
+2026-10-07 19:46:37  ports placed by the script (select-by-creation pattern; first port at x=0, second at x=200.0 um)
+2026-10-07 19:46:37  EME: 2 modes per cell group; ports at x=0 and x=200.0 um
+2026-10-07 19:46:37  geometry built: Si strip 802 vertices (200.0 um total), EME + 2 ports
+2026-10-07 19:46:37  --- point cell=5.00 um (40 cells) ---
+2026-10-07 19:46:46  S shape=[4, 4] diag=[0.181375, 0.181375, 0.181375, 0.053257] colsum=[0.544125, 0.544125, 0.544125, 0.053257]
+2026-10-07 19:52:41  opening MODE session
+2026-10-07 19:52:47  polygon auto-name: polygon
+2026-10-07 19:52:47  vertices via nested list  FAIL: "in setnamed, the value supplied is the wrong type for the property 'v
+2026-10-07 19:52:47  Si strip: setnamed(polygon, vertices) via numpy array (802 vertices)
+2026-10-07 19:52:47  ports placed by the script (select-by-creation pattern; first port at x=0, second at x=200.0 um)
+2026-10-07 19:52:47  EME: 2 modes per cell group; ports at x=0 and x=200.0 um
+2026-10-07 19:52:47  geometry built: Si strip 802 vertices (200.0 um total), EME + 2 ports
+2026-10-07 19:52:47  port probe: NO port object could be selected by any tried name
+2026-10-07 19:52:47  resource try: setresource(prop, value, solver='MODE')              FAIL: 'Invalid solver specified'
+2026-10-07 19:52:47  resource try: setresource(prop, value, solver='mode')              FAIL: 'Invalid solver specified'
+2026-10-07 19:52:47  resource try: setresource(prop, value, solver='Lumerical')         FAIL: 'Invalid solver specified'
+2026-10-07 19:52:47  resource try: setresource(prop, value, solver='lumerical')         FAIL: 'Invalid solver specified'
+2026-10-07 19:52:47  resource try: setresource(prop, value)                             FAIL: 'Invalid solver specified'
+2026-10-07 19:52:47  resource try: setresource(solver='MODE', prop, value)              FAIL: 'Invalid solver specified'
+2026-10-07 19:52:47  resource try: setresource(solver='mode', prop, value)              FAIL: 'Invalid solver specified'
+2026-10-07 19:52:47  resource try: setresource(prop, value, solver='eme')               FAIL: 'Invalid solver specified'
+2026-10-07 19:52:47  resource try: setresource(prop, value, solver='FDTD')              FAIL: 'Invalid solver specified'
+2026-10-07 19:52:47  resource try: setresource(prop='threads', value=4, solver='MODE')  FAIL: 'Invalid solver specified'
+2026-10-07 19:52:47  resource try: setresource(prop='threads', value=4, solver='mode')  FAIL: 'Invalid solver specified'
+2026-10-07 19:52:47  resource try: getresource('processes','MODE')                      FAIL: 'Invalid solver specified'
+2026-10-07 19:52:47  resource try: getresource('processes','mode')                      FAIL: 'Invalid solver specified'
+2026-10-07 19:52:47  --- point cell=5.00 um (40 cells) ---
+2026-10-07 19:52:55  S shape=[4, 4] diag=[0.181375, 0.181375, 0.181375, 0.053257] colsum=[0.544125, 0.544125, 0.544125, 0.053257]
+2026-10-07 19:52:56  --- point cell=2.50 um (80 cells) ---
+2026-10-07 19:53:12  S shape=[4, 4] diag=[0.181375, 0.181375, 0.181375, 0.053257] colsum=[0.544125, 0.544125, 0.544125, 0.053257]
+2026-10-07 19:53:13  --- point cell=1.00 um (200 cells) ---
+2026-10-07 19:53:37  S shape=[4, 4] diag=[0.181375, 0.181375, 0.181375, 0.053257] colsum=[0.544125, 0.544125, 0.544125, 0.053257]
+2026-10-07 19:53:37  wrote results.json / results.csv in C:\Users\55093\.cline\data\workspaces\chat\PERSONAL_BRAND\BUILDS\min_sbend_eme
+2026-10-07 19:57:35  opening MODE session
+2026-10-07 19:57:40  polygon auto-name: polygon
+2026-10-07 19:57:40  vertices via nested list  FAIL: "in setnamed, the value supplied is the wrong type for the property 'v
+2026-10-07 19:57:40  Si strip: setnamed(polygon, vertices) via numpy array (802 vertices)
+2026-10-07 19:57:40  ports: none added (the two ends of the EME span act as the port planes)
+2026-10-07 19:57:40  EME: 2 modes per cell group; ports at x=0 and x=200.0 um
+2026-10-07 19:57:40  geometry built: Si strip 802 vertices (200.0 um total), EME + 2 ports
+2026-10-07 19:57:40  port probe: NO port object could be selected by any tried name
+2026-10-07 19:57:40  resource try: setresource(prop, value, solver='MODE')              FAIL: 'Invalid solver specified'
+2026-10-07 19:57:40  resource try: setresource(prop, value, solver='mode')              FAIL: 'Invalid solver specified'
+2026-10-07 19:57:40  resource try: setresource(prop, value, solver='Lumerical')         FAIL: 'Invalid solver specified'
+2026-10-07 19:57:40  resource try: setresource(prop, value, solver='lumerical')         FAIL: 'Invalid solver specified'
+2026-10-07 19:57:40  resource try: setresource(prop, value)                             FAIL: 'Invalid solver specified'
+2026-10-07 19:57:40  resource try: setresource(solver='MODE', prop, value)              FAIL: 'Invalid solver specified'
+2026-10-07 19:57:40  resource try: setresource(solver='mode', prop, value)              FAIL: 'Invalid solver specified'
+2026-10-07 19:57:40  resource try: setresource(prop, value, solver='eme')               FAIL: 'Invalid solver specified'
+2026-10-07 19:57:40  resource try: setresource(prop, value, solver='FDTD')              FAIL: 'Invalid solver specified'
+2026-10-07 19:57:40  resource try: setresource(prop='threads', value=4, solver='MODE')  FAIL: 'Invalid solver specified'
+2026-10-07 19:57:40  resource try: setresource(prop='threads', value=4, solver='mode')  FAIL: 'Invalid solver specified'
+2026-10-07 19:57:40  resource try: getresource('processes','MODE')                      FAIL: 'Invalid solver specified'
+2026-10-07 19:57:40  resource try: getresource('processes','mode')                      FAIL: 'Invalid solver specified'
+2026-10-07 19:57:40  --- point cell=5.00 um (40 cells) ---
+2026-10-07 19:57:48  S shape=[2, 2] diag=[0.181375, 0.053257] colsum=[0.181375, 0.053257]
+2026-10-07 19:57:48  wrote results.json / results.csv in C:\Users\55093\.cline\data\workspaces\chat\PERSONAL_BRAND\BUILDS\min_sbend_eme
+2026-10-07 20:05:38  polygon auto-name: polygon
+2026-10-07 20:05:38  vertices via nested list  FAIL: "in setnamed, the value supplied is the wrong type for the property 'v
+2026-10-07 20:05:38  Si strip: setnamed(polygon, vertices) via numpy array (802 vertices)
+2026-10-07 20:05:38  ports: none added (the two ends of the EME span act as the port planes)
+2026-10-07 20:05:38  EME: 2 modes per cell group; ports at x=0 and x=200.0 um
+2026-10-07 20:05:38  geometry built: Si strip 802 vertices (200.0 um total), EME + 2 ports
+2026-10-07 20:07:02  polygon auto-name: polygon
+2026-10-07 20:07:02  vertices via nested list  FAIL: "in setnamed, the value supplied is the wrong type for the property 'v
+2026-10-07 20:07:02  Si strip: setnamed(polygon, vertices) via numpy array (802 vertices)
+2026-10-07 20:07:02  ports: none added (the two ends of the EME span act as the port planes)
+2026-10-07 20:07:02  EME: 2 modes per cell group; ports at x=0 and x=200.0 um
+2026-10-07 20:07:02  geometry built: Si strip 802 vertices (200.0 um total), EME + 2 ports
+2026-10-07 20:08:04  polygon auto-name: polygon
+2026-10-07 20:08:04  vertices via nested list  FAIL: "in setnamed, the value supplied is the wrong type for the property 'v
+2026-10-07 20:08:04  Si strip: setnamed(polygon, vertices) via numpy array (802 vertices)
+2026-10-07 20:08:04  ports: none added (the two ends of the EME span act as the port planes)
+2026-10-07 20:08:04  EME: 2 modes per cell group; ports at x=0 and x=200.0 um
+2026-10-07 20:08:04  geometry built: Si strip 802 vertices (200.0 um total), EME + 2 ports
+2026-10-07 20:14:14  opening MODE session
+2026-10-07 20:14:19  polygon auto-name: polygon
+2026-10-07 20:14:19  vertices via nested list  FAIL: "in setnamed, the value supplied is the wrong type for the property 'v
+2026-10-07 20:14:19  Si strip: setnamed(polygon, vertices) via numpy array (802 vertices)
+2026-10-07 20:14:20  EME region at build: x span 200.000 um, 40 cells, centred at 100.000 um (structure spans 0..200.0 um)
+2026-10-07 20:14:20  ports: none added (the two ends of the EME span act as the port planes)
+2026-10-07 20:14:20  EME: 2 modes per cell group; ports at x=0 and x=200.0 um
+2026-10-07 20:14:20  geometry built: Si strip 802 vertices (200.0 um total), EME + 2 ports
+2026-10-07 20:14:20  port probe: NO port object could be selected by any tried name
+2026-10-07 20:14:20  resource try: setresource(prop, value, solver='MODE')              FAIL: 'Invalid solver specified'
+2026-10-07 20:14:20  resource try: setresource(prop, value, solver='mode')              FAIL: 'Invalid solver specified'
+2026-10-07 20:14:20  resource try: setresource(prop, value, solver='Lumerical')         FAIL: 'Invalid solver specified'
+2026-10-07 20:14:20  resource try: setresource(prop, value, solver='lumerical')         FAIL: 'Invalid solver specified'
+2026-10-07 20:14:20  resource try: setresource(prop, value)                             FAIL: 'Invalid solver specified'
+2026-10-07 20:14:20  resource try: setresource(solver='MODE', prop, value)              FAIL: 'Invalid solver specified'
+2026-10-07 20:14:20  resource try: setresource(solver='mode', prop, value)              FAIL: 'Invalid solver specified'
+2026-10-07 20:14:20  resource try: setresource(prop, value, solver='eme')               FAIL: 'Invalid solver specified'
+2026-10-07 20:14:20  resource try: setresource(prop, value, solver='FDTD')              FAIL: 'Invalid solver specified'
+2026-10-07 20:14:20  resource try: setresource(prop='threads', value=4, solver='MODE')  FAIL: 'Invalid solver specified'
+2026-10-07 20:14:20  resource try: setresource(prop='threads', value=4, solver='mode')  FAIL: 'Invalid solver specified'
+2026-10-07 20:14:20  resource try: getresource('processes','MODE')                      FAIL: 'Invalid solver specified'
+2026-10-07 20:14:20  resource try: getresource('processes','mode')                      FAIL: 'Invalid solver specified'
+2026-10-07 20:14:20  --- point cell=5.00 um (40 cells) ---
+2026-10-07 20:14:33  S shape=[2, 2] diag=[0.0, 0.0] colsum=[1.0, 1.0]
+2026-10-07 20:14:33  wrote results.json / results.csv in C:\Users\55093\.cline\data\workspaces\chat\PERSONAL_BRAND\BUILDS\min_sbend_eme
+2026-10-07 20:38:40  opening MODE session
+2026-10-07 20:38:46  polygon auto-name: polygon
+2026-10-07 20:38:46  vertices via nested list  FAIL: "in setnamed, the value supplied is the wrong type for the property 'v
+2026-10-07 20:38:46  Si strip: setnamed(polygon, vertices) via numpy array (802 vertices)
+2026-10-07 20:38:46  EME region at build: x span 200.000 um, 40 cells, centred at 100.000 um (structure spans 0..200.0 um)
+2026-10-07 20:38:46  ports: none added (the two ends of the EME span act as the port planes)
+2026-10-07 20:38:46  EME: 2 modes per cell group; ports at x=0 and x=200.0 um
+2026-10-07 20:38:46  geometry built: Si strip 802 vertices (200.0 um total), EME + 2 ports
+2026-10-07 20:38:46  port probe: NO port object could be selected by any tried name
+2026-10-07 20:38:46  resource try: setresource(prop, value, solver='MODE')              FAIL: 'Invalid solver specified'
+2026-10-07 20:38:46  resource try: setresource(prop, value, solver='mode')              FAIL: 'Invalid solver specified'
+2026-10-07 20:38:46  resource try: setresource(prop, value, solver='Lumerical')         FAIL: 'Invalid solver specified'
+2026-10-07 20:38:46  resource try: setresource(prop, value, solver='lumerical')         FAIL: 'Invalid solver specified'
+2026-10-07 20:38:46  resource try: setresource(prop, value)                             FAIL: 'Invalid solver specified'
+2026-10-07 20:38:46  resource try: setresource(solver='MODE', prop, value)              FAIL: 'Invalid solver specified'
+2026-10-07 20:38:46  resource try: setresource(solver='mode', prop, value)              FAIL: 'Invalid solver specified'
+2026-10-07 20:38:46  resource try: setresource(prop, value, solver='eme')               FAIL: 'Invalid solver specified'
+2026-10-07 20:38:46  resource try: setresource(prop, value, solver='FDTD')              FAIL: 'Invalid solver specified'
+2026-10-07 20:38:46  resource try: setresource(prop='threads', value=4, solver='MODE')  FAIL: 'Invalid solver specified'
+2026-10-07 20:38:46  resource try: setresource(prop='threads', value=4, solver='mode')  FAIL: 'Invalid solver specified'
+2026-10-07 20:38:46  resource try: getresource('processes','MODE')                      FAIL: 'Invalid solver specified'
+2026-10-07 20:38:46  resource try: getresource('processes','mode')                      FAIL: 'Invalid solver specified'
+2026-10-07 20:38:46  --- point cell=5.00 um (40 cells) ---
+2026-10-07 20:38:54  S shape=[2, 2] diag=[0.009006, 0.009006] colsum=[0.009006, 0.009006]
+2026-10-07 20:38:54  wrote results.json / results.csv in C:\Users\55093\.cline\data\workspaces\chat\PERSONAL_BRAND\BUILDS\min_sbend_eme
+2026-10-07 20:43:02  opening MODE session
+2026-10-07 20:43:07  polygon auto-name: polygon
+2026-10-07 20:43:07  vertices via nested list  FAIL: "in setnamed, the value supplied is the wrong type for the property 'v
+2026-10-07 20:43:07  Si strip: setnamed(polygon, vertices) via numpy array (802 vertices)
+2026-10-07 20:43:08  EME region at build: x span 200.000 um, 40 cells, centred at 100.000 um (structure spans 0..200.0 um)
+2026-10-07 20:43:08  ports: none added (the two ends of the EME span act as the port planes)
+2026-10-07 20:43:08  EME: 2 modes per cell group; ports at x=0 and x=200.0 um
+2026-10-07 20:43:08  geometry built: Si strip 802 vertices (200.0 um total), EME + 2 ports
+2026-10-07 20:43:08  port probe: NO port object could be selected by any tried name
+2026-10-07 20:43:08  resource try: setresource(prop, value, solver='MODE')              FAIL: 'Invalid solver specified'
+2026-10-07 20:43:08  resource try: setresource(prop, value, solver='mode')              FAIL: 'Invalid solver specified'
+2026-10-07 20:43:08  resource try: setresource(prop, value, solver='Lumerical')         FAIL: 'Invalid solver specified'
+2026-10-07 20:43:08  resource try: setresource(prop, value, solver='lumerical')         FAIL: 'Invalid solver specified'
+2026-10-07 20:43:08  resource try: setresource(prop, value)                             FAIL: 'Invalid solver specified'
+2026-10-07 20:43:08  resource try: setresource(solver='MODE', prop, value)              FAIL: 'Invalid solver specified'
+2026-10-07 20:43:08  resource try: setresource(solver='mode', prop, value)              FAIL: 'Invalid solver specified'
+2026-10-07 20:43:08  resource try: setresource(prop, value, solver='eme')               FAIL: 'Invalid solver specified'
+2026-10-07 20:43:08  resource try: setresource(prop, value, solver='FDTD')              FAIL: 'Invalid solver specified'
+2026-10-07 20:43:08  resource try: setresource(prop='threads', value=4, solver='MODE')  FAIL: 'Invalid solver specified'
+2026-10-07 20:43:08  resource try: setresource(prop='threads', value=4, solver='mode')  FAIL: 'Invalid solver specified'
+2026-10-07 20:43:08  resource try: getresource('processes','MODE')                      FAIL: 'Invalid solver specified'
+2026-10-07 20:43:08  resource try: getresource('processes','mode')                      FAIL: 'Invalid solver specified'
+2026-10-07 20:43:08  --- point cell=5.00 um (40 cells) ---
+2026-10-07 20:43:18  S shape=[2, 2] diag=[0.009006, 0.009006] colsum=[0.009006, 0.009006]
+2026-10-07 20:43:18  wrote results.json / results.csv in C:\Users\55093\.cline\data\workspaces\chat\PERSONAL_BRAND\BUILDS\min_sbend_eme
+2026-10-07 20:43:32  opening MODE session
+2026-10-07 20:43:38  polygon auto-name: polygon
+2026-10-07 20:43:38  vertices via nested list  FAIL: "in setnamed, the value supplied is the wrong type for the property 'v
+2026-10-07 20:43:38  Si strip: setnamed(polygon, vertices) via numpy array (802 vertices)
+2026-10-07 20:43:38  EME region at build: x span 200.000 um, 40 cells, centred at 100.000 um (structure spans 0..200.0 um)
+2026-10-07 20:43:38  ports: none added (the two ends of the EME span act as the port planes)
+2026-10-07 20:43:38  EME: 2 modes per cell group; ports at x=0 and x=200.0 um
+2026-10-07 20:43:38  geometry built: Si strip 802 vertices (200.0 um total), EME + 2 ports
+2026-10-07 20:43:38  port probe: NO port object could be selected by any tried name
+2026-10-07 20:43:38  resource try: setresource(prop, value, solver='MODE')              FAIL: 'Invalid solver specified'
+2026-10-07 20:43:38  resource try: setresource(prop, value, solver='mode')              FAIL: 'Invalid solver specified'
+2026-10-07 20:43:38  resource try: setresource(prop, value, solver='Lumerical')         FAIL: 'Invalid solver specified'
+2026-10-07 20:43:38  resource try: setresource(prop, value, solver='lumerical')         FAIL: 'Invalid solver specified'
+2026-10-07 20:43:38  resource try: setresource(prop, value)                             FAIL: 'Invalid solver specified'
+2026-10-07 20:43:38  resource try: setresource(solver='MODE', prop, value)              FAIL: 'Invalid solver specified'
+2026-10-07 20:43:38  resource try: setresource(solver='mode', prop, value)              FAIL: 'Invalid solver specified'
+2026-10-07 20:43:38  resource try: setresource(prop, value, solver='eme')               FAIL: 'Invalid solver specified'
+2026-10-07 20:43:38  resource try: setresource(prop, value, solver='FDTD')              FAIL: 'Invalid solver specified'
+2026-10-07 20:43:38  resource try: setresource(prop='threads', value=4, solver='MODE')  FAIL: 'Invalid solver specified'
+2026-10-07 20:43:38  resource try: setresource(prop='threads', value=4, solver='mode')  FAIL: 'Invalid solver specified'
+2026-10-07 20:43:38  resource try: getresource('processes','MODE')                      FAIL: 'Invalid solver specified'
+2026-10-07 20:43:38  resource try: getresource('processes','mode')                      FAIL: 'Invalid solver specified'
+2026-10-07 20:43:38  --- point cell=2.50 um (80 cells) ---
+2026-10-07 20:43:50  S shape=[2, 2] diag=[0.011634, 0.011634] colsum=[0.011634, 0.011634]
+2026-10-07 20:43:50  wrote results.json / results.csv in C:\Users\55093\.cline\data\workspaces\chat\PERSONAL_BRAND\BUILDS\min_sbend_eme
+2026-10-07 20:43:51  opening MODE session
+2026-10-07 20:43:56  polygon auto-name: polygon
+2026-10-07 20:43:56  vertices via nested list  FAIL: "in setnamed, the value supplied is the wrong type for the property 'v
+2026-10-07 20:43:56  Si strip: setnamed(polygon, vertices) via numpy array (802 vertices)
+2026-10-07 20:43:57  EME region at build: x span 200.000 um, 40 cells, centred at 100.000 um (structure spans 0..200.0 um)
+2026-10-07 20:43:57  ports: none added (the two ends of the EME span act as the port planes)
+2026-10-07 20:43:57  EME: 2 modes per cell group; ports at x=0 and x=200.0 um
+2026-10-07 20:43:57  geometry built: Si strip 802 vertices (200.0 um total), EME + 2 ports
+2026-10-07 20:43:57  port probe: NO port object could be selected by any tried name
+2026-10-07 20:43:57  resource try: setresource(prop, value, solver='MODE')              FAIL: 'Invalid solver specified'
+2026-10-07 20:43:57  resource try: setresource(prop, value, solver='mode')              FAIL: 'Invalid solver specified'
+2026-10-07 20:43:57  resource try: setresource(prop, value, solver='Lumerical')         FAIL: 'Invalid solver specified'
+2026-10-07 20:43:57  resource try: setresource(prop, value, solver='lumerical')         FAIL: 'Invalid solver specified'
+2026-10-07 20:43:57  resource try: setresource(prop, value)                             FAIL: 'Invalid solver specified'
+2026-10-07 20:43:57  resource try: setresource(solver='MODE', prop, value)              FAIL: 'Invalid solver specified'
+2026-10-07 20:43:57  resource try: setresource(solver='mode', prop, value)              FAIL: 'Invalid solver specified'
+2026-10-07 20:43:57  resource try: setresource(prop, value, solver='eme')               FAIL: 'Invalid solver specified'
+2026-10-07 20:43:57  resource try: setresource(prop, value, solver='FDTD')              FAIL: 'Invalid solver specified'
+2026-10-07 20:43:57  resource try: setresource(prop='threads', value=4, solver='MODE')  FAIL: 'Invalid solver specified'
+2026-10-07 20:43:57  resource try: setresource(prop='threads', value=4, solver='mode')  FAIL: 'Invalid solver specified'
+2026-10-07 20:43:57  resource try: getresource('processes','MODE')                      FAIL: 'Invalid solver specified'
+2026-10-07 20:43:57  resource try: getresource('processes','mode')                      FAIL: 'Invalid solver specified'
+2026-10-07 20:43:57  --- point cell=1.00 um (200 cells) ---
+2026-10-07 20:44:20  S shape=[2, 2] diag=[0.006758, 0.006758] colsum=[0.011512, 0.011512]
+2026-10-07 20:44:20  wrote results.json / results.csv in C:\Users\55093\.cline\data\workspaces\chat\PERSONAL_BRAND\BUILDS\min_sbend_eme

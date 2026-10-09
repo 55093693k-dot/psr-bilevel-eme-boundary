@@ -1,7 +1,7 @@
 # run_eme_coupler.py -- 耦合器段（绝热段）EME 验证
 # 域 x 100…410 µm；端口严格放在该示例的耦合器边界 x=105（入口，TE1 注入）/ x=405（出口）
 # 单频 λ=1.55 µm + constraint="passive"（要绝对 IL，不能 unitary）+ 存端口模式（按 neff 认模）
-# 用法：python run_eme_coupler.py [--modes 4] [--y 6] [--submit]   （不带 --submit = dry-run，0 FlexCredit）
+# 用法：python run_eme_coupler.py [--modes 4] [--y 6] [--cell 5.0] [--submit]   （不带 --submit = dry-run，0 FlexCredit）
 import os
 import sys
 
@@ -17,6 +17,7 @@ P = rbp.P
 LAM = 1.55
 NMODES = int(sys.argv[sys.argv.index("--modes") + 1]) if "--modes" in sys.argv else 4
 YS = float(sys.argv[sys.argv.index("--y") + 1]) if "--y" in sys.argv else 6.0
+CELLS = float(sys.argv[sys.argv.index("--cell") + 1]) if "--cell" in sys.argv else 5.0
 
 XP1 = P["L_blt"] + P["L_s"]                                # 105 µm：junction / 耦合器入口（该示例：mode1=TE1）
 XP2 = XP1 + P["L_ac"]                                      # 405 µm：耦合器出口（该示例：mode3→底部 TE0）
@@ -27,7 +28,7 @@ PAD = 5.0
 # 注意（源码 eme/simulation.py:807）：EME 网格区间 = 域**扣除 port_offsets**，
 #   端口面（105/405）自动成为首/末边界 ⇒ 用户 boundaries 必须**严格落在两端口之间**（易错项）。
 xs = np.concatenate([np.arange(XP1 + 0.5, XP1 + PAD + 1e-9, 0.5),
-                     np.arange(XP1 + PAD, XP2 + 1e-9, 5.0)])
+                     np.arange(XP1 + PAD, XP2 + 1e-9, CELLS)])
 bnd = sorted({round(float(v), 5) for v in xs if XP1 + 1e-6 < float(v) < XP2 - 1e-6})
 grid = td.EMEExplicitGrid(mode_specs=[td.EMEModeSpec(num_modes=NMODES) for _ in range(len(bnd) + 1)],
                           boundaries=tuple(bnd))
@@ -47,10 +48,10 @@ sim = sim0.updated_copy(
 )
 sim.validate_pre_upload()
 print("=== coupler EME: 域 x %.0f…%.0f µm | 端口 x=%.0f(入口) / %.0f(出口) ===" % (X0, X1, XP1, XP2))
-print("modes/port=%d | EME cells=%d (%d internal bnd; 0.5µm@junction + 5µm@coupler) | y=%.1f | f=%d | constraint=%s"
-      % (NMODES, len(bnd) + 1, len(bnd), YS, len(sim.freqs), sim.constraint))
+print("modes/port=%d | EME cells=%d (%d internal bnd; 0.5µm@junction + %.2fµm@coupler) | y=%.1f | f=%d | constraint=%s"
+      % (NMODES, len(bnd) + 1, len(bnd), CELLS, YS, len(sim.freqs), sim.constraint))
 
-task = "psr_coupler_eme_m%d_y%g" % (NMODES, YS)
+task = "psr_coupler_eme_m%d_y%g_c%g" % (NMODES, YS, CELLS)
 job = web.Job(simulation=sim, task_name=task, verbose=False)
 print("estimate_cost (FlexCredit):", web.estimate_cost(job.task_id))
 if "--submit" not in sys.argv:
@@ -62,7 +63,7 @@ S = data.smatrix.S21
 print("S21 dims:", tuple(S.dims), "shape:", S.shape)
 for nm, tag in (("modes_in", "入口 x=105"), ("modes_out", "出口 x=405")):
     try:
-        md = getattr(data, nm)
+        md = data.monitor_data[nm]   # port mode solutions live here (see the failure library entry for this read path), not on data.<monitor>
         print("neff %s (%s):" % (nm, tag), np.round(np.real(np.atleast_2d(md.n_complex.values)[0]), 4))
     except Exception as e:                                  # noqa: BLE001
         print("neff %s: 读取失败 %s" % (nm, e))

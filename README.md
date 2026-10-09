@@ -11,17 +11,21 @@ and the figure-provenance / reference tools used for its figures
 Short version:
 
 - The mechanism is reproduced and cross-validated by **two independent methods**:
-  `TM0 → TE1 = 98.35%` (3D FDTD, taper segment) and `TE1 → lower-arm TE0 = 99.233%`
+  `TM0 → TE1 = 99.84%` (3D FDTD, taper segment) and `TE1 → lower-arm TE0 = 99.233%`
   (3D EME, coupler segment; passes a 4→6 port-mode convergence check, Δ = −0.29%).
 - **Device-level absolute insertion loss is deliberately not quoted.** In this structure the EME
   port-power column sums stay ≈ 1 even after adding port modes (4 → 6), so within this port-mode basis no radiation-loss
   channel ever appears in the port-mode basis. Adding modes was tested and **ruled out as a route**
   to the loss number.
+- A **minimal S-bend** — the smallest structure that still shows why these numbers behave the way they
+  do — was re-read on a **second solver** (Lumerical MODE, three engines): the same nominal structure
+  reads **0.055 / 0.765 / lossless**, while the exact bent solve says the bend is lossless. See
+  [*The minimal S-bend on a second solver*](#the-minimal-s-bend-on-a-second-solver-lumerical-mode).
 - Read [`§5`](#5-why-this-repo-exists-the-column-sum-observation) for the observation and
   [`§6`](#6-scope--limitations-read-before-quoting-any-number) for the quoting rules.
 
 > **If you want to quote a number from this repo, quote §6 with it.**
-> The two referenceable values are `98.35%` and `99.233%`. Everything else here is either
+> The two referenceable values are `99.84%` and `99.233%`. Everything else here is either
 > context, or explicitly not referenceable.
 
 **Status**: mechanism verified; device-level IL **not** certified.
@@ -88,7 +92,7 @@ Neither one alone would be convincing; together they trace the full adiabatic pa
 
 | Segment | Method / settings | Result |
 |---|---|---|
-| **taper** (domain x −6…109 µm; taper geometry x 0…105 µm; TM0 in) | **3D FDTD** (Tidy3D ModeSource → ModeMonitor at x = 105 µm, 2 modes); 12 steps/λ in-plane plus a 20 nm z-override; `run_time = 3.6 ps` (≥ 2× the optical path time) | **TM0 → TE1 = 98.35%** (TM0 → TE0 = 0.0000); segment IL ≈ **0.072 dB** — this is an **upper bound**, the domain was clipped in y |
+| **taper** (domain x −6…109 µm; taper geometry x 0…105 µm; TM0 in) | **3D FDTD** (Tidy3D ModeSource → ModeMonitor at x = 105 µm, 2 modes); 12 steps/λ in-plane plus a 20 nm z-override; `run_time = 3.6 ps` (≥ 2× the optical path time) | **TM0 → TE1 = 99.84%** (TM0 → TE0 = 0.0000); segment IL ≈ **0.072 dB** — this is an **upper bound**, the domain was clipped in y |
 | **coupler** (x 100…410 µm, TE1 in) | **3D EME** (`EMEExplicitGrid`, 69 cells; ports at x = 105 / x = 405; **6 modes**, `constraint="passive"`, single frequency 1.55 µm) | **TE1 → lower-arm TE0 = 99.233%** (passes 4→6 convergence, Δ = −0.29% < 2%); TE1 → upper arm 5e-5; TE0 → upper-arm TE0 = 99.805%; TE0 → lower-arm TE0 = 2e-5 |
 
 **Conclusion carried by these two rows**: `TM0 → (taper) TE1 → (adiabatic coupler) lower-arm TE0`,
@@ -180,7 +184,7 @@ The figure is an external (matplotlib) re-plot of the tabulated results, not a s
 
 ### 5.3 What follows, and the honest limits of it
 
-- **Referenceable**: `TM0 → TE1 = 98.35%` (taper, 3D FDTD) and `TE1 → lower-arm TE0 = 99.233%`
+- **Referenceable**: `TM0 → TE1 = 99.84%` (taper, 3D FDTD) and `TE1 → lower-arm TE0 = 99.233%`
   (coupler, 6 modes, converged). Both are **port-mode-basis** conversions — a mode-basis overlap integral at a port — and **not device efficiencies**.
 - **Not referenceable**: device-level absolute insertion loss / return loss from this route.
   The evidence is the column sums above; the remaining options are an **all-device 3D FDTD**
@@ -219,7 +223,7 @@ all versions: [10.5281/zenodo.22976303](https://doi.org/10.5281/zenodo.22976303)
    - coupler segment **TE1 → lower-arm TE0 = 99.233%**
      (6 modes / `passive` / single frequency λ = 1.55 µm, **passed the 4→6 port-mode convergence
      check, Δ = −0.29%**);
-   - taper segment **TM0 → TE1 = 98.35%** (3D FDTD, λ = 1.55 µm).
+   - taper segment **TM0 → TE1 = 99.84%** (3D FDTD, λ = 1.55 µm).
 2. **Not referenceable (uncertified)**: **device-level absolute insertion loss / return loss**.
    Basis (with evidence): EME port column sums ≈ 1 (4 modes 0.99889–0.99999; 6 modes 0.99973–0.99999)
    ⇒ **"increasing the number of port modes" did not expose an additional loss channel within this port-mode basis** (it cannot show what the basis cannot represent) (the opposite expectation — that the column sums would fall below 1 once modes were added — was falsified by that 4 → 6 run,
@@ -300,14 +304,14 @@ project files. They are *results*, not dependencies — the scripts above regene
 ## 9. 中文摘要
 
 复刻一个**公开的双台阶锥绝热偏振旋转器设计**到 SOI 220 nm + 90 nm 部分刻蚀平台。
-机理用**两段独立方法互证**：taper 段 3D FDTD 给 `TM0 → TE1 = 98.35%`；
+机理用**两段独立方法互证**：taper 段 3D FDTD 给 `TM0 → TE1 = 99.84%`；
 耦合器段 3D EME 给 `TE1 → 下臂 TE0 = 99.233%`（已过 4→6 模式收敛，Δ = −0.29%）。
 
 **器件级绝对插损我拒绝给数**：EME 端口功率逐列和恒 ≈ 1，把端口模式数从 4 加到 6 之后
 列和**没有**降到 <1（最低值反而从 0.99889 升到 0.99973）—— "加模式数就能暴露辐射损耗"
 这条直觉被那次 4→6 的 EME 运行否证（运行记录见 `notes/`）。要这个指标只能走全器件 3D FDTD 或流片实测。
 
-**可引用的只有两个数**：`98.35%` 与 `99.233%`；引用时请一并引用 §6 的限制条款。
+**可引用的只有两个数**：`99.84%` 与 `99.233%`；引用时请一并引用 §6 的限制条款。
 （配套工程报告**随本仓发布**（英文原文见 §1–§8 与 notebook）；它的永久可引用副本 = 归档版本：
 **DOI `10.5281/zenodo.23013982`**（`v1.0.3`，2026-09-28；全部版本用 `10.5281/zenodo.22976303`）。）
 
@@ -329,3 +333,47 @@ a DOI: cite **10.5281/zenodo.23013982** (`v1.0.3`, 2026-09-28) for this version,
 
 **If you reuse a number from here**: please carry the §6 scope with it. Where the number came from a
 figure, also state that the figure is an external (matplotlib) re-plot — see `figures/FIGURES.md`.
+
+## The minimal S-bend on a second solver (Lumerical MODE)
+
+The runs in [`second_solver/`](second_solver/) re-read a **minimal** structure — straight guide, one
+S-bend of 5 µm offset over 100 µm, straight guide; 500 × 220 nm Si on SiO₂, λ = 1.55 µm — on a
+simulation platform that shares no code with the first one. They exist because the column-sum
+observation above is stated for a class of structures, not for one device.
+
+| method | reading for the same S-bend |
+|---|---|
+| EME (straight cells stacked along the bend) | column sum **≈ 0.055** |
+| varFDTD (2.5-D effective index) | key channel **0.765** (same-caliber straight control 0.975) |
+| FDE bent-waveguide mode at R = 405 µm (exact) | **lossless**, 7.6 × 10⁻¹⁰ |
+
+Two things follow, and neither of them is a device number:
+
+- **The reading is a property of the method, not of the device.** One nominal structure, three
+  engines, three answers — and the exact solve says the bend is lossless.
+- **Each numerical choice moves the reading once its feature is amplified.** With the same 5 µm offset
+  over only 20 µm, the EME column sum moves by ≈ **800×** with the cell length (0.0085 % … 6.6 %) and
+  by ≈ **44×** with the mode count (0.27 % … 3.5 %); the controls in which only the device changes all
+  read ≈ 1 (straight 1.000, constant-5 µm-offset guide 1.000, width taper 0.999).
+
+**Calibers.** No EME reading here is converged (both knobs are non-monotonic and still moving at the
+finest setting used), so they are evidence that the knobs dominate the reading — not convergence
+curves. varFDTD's bend reading is noisy and its straight control is a different caliber, so their
+ratio is indicative only. The `.lms` projects are not shipped (30–130 MB each); the scripts in that
+folder rebuild them. [`second_solver/README.md`](second_solver/README.md) carries the details and the
+per-file map.
+
+## External review and corrected settings
+
+These runs were reviewed by an engineer of the simulation platform on its public discussion board
+(thread 3391: https://github.com/flexcompute/tidy3d/discussions/3391). Two corrections were adopted
+and re-measured here; the reply itself is reproduced verbatim in appendix-A-external-reply.txt, with
+the note that it is the reviewer text and not our measurement.
+
+- Taper segment FDTD: with use_colocated_integration=False on the port source and monitor, colocate=False
+  on the monitor, and shutoff=1e-4, the TM0 -> TE1 reading is 99.84 %, against 98.35 % with the previous
+  settings. Our own re-run gives 0.9984, consistent with the 0.998 obtained in the review.
+- EME column sums: the earlier boundary came from 5 um straight cells across the S-bends; shorter cells
+  converge to a loss-free column sum, and loss should be read as a sum over guided modes only.
+
+Run record: notes/log_taper_recheck_20261006.txt.

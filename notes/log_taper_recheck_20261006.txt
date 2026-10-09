@@ -1,0 +1,15 @@
+Run record 2026-10-06 -- taper segment re-run with the corrected settings
+
+Purpose: re-measure TM0 -> TE1 with the settings given in the external review (Tidy3D discussion 3391).
+Changed relative to the version that produced 98.35 %: use_colocated_integration=False on the ModeSource
+and the ModeMonitor, colocate=False on the ModeMonitor, and simulation shutoff 1e-4 (was 1e-5).
+Nothing else was changed.
+
+Command: python sim/run_fdtd_short.py --pol tm --submit
+Estimated cost (FlexCredit): 1.75511338500066816
+
+Output:
+TM input  -> T(mode0)=0.0000  T(mode1)=0.9984
+
+Notes: the run reports solver-log warnings (a dispersive medium extends into the PML in this scene),
+as the review also notes. For the same change of settings the review obtained 0.998.
