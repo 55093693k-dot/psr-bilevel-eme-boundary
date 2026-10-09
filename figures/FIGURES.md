@@ -10,8 +10,11 @@ figure** and in its PNG metadata.
 | `colsum_and_conversion_vs_modes.png` | matplotlib **re-plot of tabulated EME results** (column sums + conversion at 4 and 6 port modes) | `external` | ✅ yes — on-figure footer **and** PNG `tEXt` chunk `External-Plot` |
 | `device_topview.png` | matplotlib **re-draw from the solver model** — two z-slices of the whole device (partial-etch slab layer and waveguide layer) | `external` | ✅ statement in the PNG `tEXt` chunk `External-Plot` **and in the manuscript caption**; **no on-figure footer** (on purpose, 2026-09-28: it blocked the drawing). Original canvas kept pixel-for-pixel; proportions narrowed to **2.00:1** by white padding |
 | `device_cross_section.png` | matplotlib **re-draw from the solver model** — cross-section at the adiabatic coupler | `external` | ✅ statement in the PNG `tEXt` chunk `External-Plot` **and in the manuscript caption**; **no on-figure footer** (2026-09-28). Original canvas kept as it was (1677x637 px) |
+| `device_solver_export.pdf` | **solver export** — Tidy3D `plot_structures` on the model that was simulated: top view at the partial-etch slab level, and a cross-section at the middle of the coupler | `solver` | n/a — a solver export carries no "external plot" label |
 
-**None of these three is a solver export.** Do not quote any of them as "the solver's own view".
+**None of the three re-draws is a solver export.** Do not quote any of them as "the solver's own
+view". (`device_solver_export.pdf`, added 2026-10-10, *is* one — it exists because a reader of the
+report had no picture of the case device, and a hand re-draw is not allowed to stand in for one.)
 For the two referenceable numbers (`99.84%`, `99.233%`), cite §3 and §6 of the README — never a figure.
 
 ## State of these figures — 2026-09-28 (later the same day)
