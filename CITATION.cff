@@ -3,7 +3,7 @@ message: >-
   If you use this repository, please cite it as below -- and carry the scope note in the abstract
   with any number you quote from it.
 title: >-
-  psr-bilevel-eme-scope: a reproduction of a public bi-level adiabatic polarization
+  psr-bilevel-eme-boundary: a reproduction of a public bi-level adiabatic polarization
   splitter-rotator (SOI 220 nm + 90 nm partial etch), and the boundary of a mode-expansion
   insertion loss -- port basis, discretisation and solver defaults
 abstract: >-
@@ -40,8 +40,8 @@ date-released: "2026-10-10"
 license:
   - "MIT"
   - "CC-BY-4.0"
-url: "https://github.com/55093693k-dot/psr-bilevel-eme-scope"
-repository-code: "https://github.com/55093693k-dot/psr-bilevel-eme-scope"
+url: "https://github.com/55093693k-dot/psr-bilevel-eme-boundary"
+repository-code: "https://github.com/55093693k-dot/psr-bilevel-eme-boundary"
 keywords:
   - silicon photonics
   - polarization splitter-rotator

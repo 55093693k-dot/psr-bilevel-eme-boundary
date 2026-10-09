@@ -1,4 +1,4 @@
-# psr-bilevel-eme-scope
+# psr-bilevel-eme-boundary
 
 **A reproduction of a public bi-level adiabatic polarization-splitter-rotator (PSR) design on
 SOI 220 nm + 90 nm partial etch — and the boundary of a mode-expansion insertion loss: port basis,
