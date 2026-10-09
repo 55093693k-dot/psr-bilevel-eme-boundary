@@ -9,12 +9,14 @@ that the bent solver actually works). If 405 um is ~0, the S-bend is lossless an
 """
 from __future__ import annotations
 
+import os
+
 import numpy as np
 
 LAM = 1.55e-6
 W = 0.5e-6
 T_SI = 0.22e-6
-SAVE = r"C:\Users\55093\.cline\data\workspaces\chat\PERSONAL_BRAND\BUILDS\min_sbend_eme"
+SAVE = os.path.dirname(os.path.abspath(__file__))
 
 
 def run(mode, radii_um=(405.0, 10.0, 5.0)) -> dict:

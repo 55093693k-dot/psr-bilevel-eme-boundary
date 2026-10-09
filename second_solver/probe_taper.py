@@ -15,6 +15,8 @@ Run through the persistent MODE process (whole-file exec; the channel splits ind
 """
 from __future__ import annotations
 
+import os
+
 import numpy as np
 
 LAM = 1.55e-6
@@ -22,7 +24,7 @@ L_TOT = 200e-6
 L_BEND = 100e-6
 L_STRAIGHT = 50e-6
 T_SI = 0.22e-6
-SAVE = r"C:\Users\55093\.cline\data\workspaces\chat\PERSONAL_BRAND\BUILDS\min_sbend_eme"
+SAVE = os.path.dirname(os.path.abspath(__file__))
 
 
 def _scene(mode, win_center: float, win_span: float) -> None:

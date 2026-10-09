@@ -10,8 +10,7 @@ import os
 
 import numpy as np
 
-OUT = os.path.join(r"C:\Users\55093\.cline\data\workspaces\chat\PERSONAL_BRAND\BUILDS\optica_build",
-                   "figures_pilot")
+OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "figures_pilot")
 L_TOT, L_BEND, L_STR, W, DY, T_SI = 200.0, 100.0, 50.0, 0.5, 5.0, 0.22
 
 

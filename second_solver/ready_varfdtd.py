@@ -6,6 +6,8 @@ Purpose: leave a ready-to-run project in the visible GUI so you can set the para
 """
 from __future__ import annotations
 
+import os
+
 import numpy as np
 
 L_TOT = 200e-6
@@ -13,8 +15,8 @@ L_BEND = 100e-6
 L_STRAIGHT = 50e-6
 W = 0.5e-6
 T_SI = 0.22e-6
-SAVE_DEFAULT = (r"C:\Users\55093\.cline\data\workspaces\chat\PERSONAL_BRAND"
-                r"\BUILDS\min_sbend_eme\ready_sbend_varfdtd.lms")
+SAVE_DEFAULT = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                            "ready_sbend_varfdtd.lms")
 
 
 def verts(dy: float, n: int = 401) -> np.ndarray:

@@ -68,8 +68,9 @@ ones.
 - `ready_varfdtd.py`, `read_varfdtd.py`, `sweep_varfdtd.py`, `probe_varfdtd.py` — the varFDTD route.
 - `PROBE_FINDINGS_20261007.md` — the round-by-round record (Chinese, as originally written): what was
   measured, what was ruled out, and the calibers.
-- `*_p0.log`, `probe.log`, `run.log`, `console.out/.err` — the engine and session logs the readings
-  were read from.
+- `*_p0.log`, `probe.log`, `run.log` — the engine and session logs the readings were read from. The
+  workstation's absolute paths were replaced by `<workdir>` / `<home>` in them, and the two console
+  dumps were left out for the same reason; nothing else in those files was changed.
 - `results.json`, `results.csv`, `probe_results.json` — the machine-readable readings.
 - `make_figA_two_views.py`, `make_figA_tidy3d.py`, `make_figA_lumerical.py`, `make_figB.py`,
   `make_figC.py` — the scripts that drew the report's three figures from these records. The first

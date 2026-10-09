@@ -9,6 +9,8 @@ scene. Run through the persistent MODE process.
 """
 from __future__ import annotations
 
+import os
+
 import numpy as np
 
 L_TOT = 200e-6
@@ -122,7 +124,7 @@ L_BEND = 100e-6
 L_STRAIGHT = 50e-6
 W = 0.5e-6
 T_SI = 0.22e-6
-SAVE = r"C:\Users\55093\.cline\data\workspaces\chat\PERSONAL_BRAND\BUILDS\min_sbend_eme"
+SAVE = os.path.dirname(os.path.abspath(__file__))
 
 
 def _verts(dy: float, n: int = 401) -> np.ndarray:

@@ -8,13 +8,15 @@ the column sum moves with it, the cell clause of Sec. 4.2 is verified on this ro
 """
 from __future__ import annotations
 
+import os
+
 import numpy as np
 
 MAT_SI = "Si (Silicon) - Palik"
 MAT_SIO2 = "SiO2 (Glass) - Palik"
 W = 0.5e-6
 T_SI = 0.22e-6
-SAVE = r"C:\Users\55093\.cline\data\workspaces\chat\PERSONAL_BRAND\BUILDS\min_sbend_eme"
+SAVE = os.path.dirname(os.path.abspath(__file__))
 
 
 def verts(dy: float, l_str: float, l_bend: float, n: int = 401) -> np.ndarray:
