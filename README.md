@@ -331,8 +331,9 @@ project files. They are *results*, not dependencies — the scripts above regene
 **Citing this repository**: `CITATION.cff` carries the citation metadata for GitHub, and
 `.zenodo.json` carries the same scope text for the archived record. Cite the repository URL plus
 the date you accessed it, and carry the §6 scope with any number you quote. The archived release carries
-a DOI: cite **10.5281/zenodo.23013982** (`v1.0.3`, 2026-09-28) for this version, or
-**10.5281/zenodo.22976303** for the repository as a whole. `CITATION.cff` also carries the author's ORCID.
+a DOI: cite **10.5281/zenodo.22976303** for the repository as a whole, or the *version* DOI of the
+release you used — `v1.0.3` (2026-09-28) is **10.5281/zenodo.23013982**, and `v1.0.4`'s version DOI is
+written here once Zenodo has minted it. `CITATION.cff` also carries the author's ORCID.
 
 **If you reuse a number from here**: please carry the §6 scope with it. Where the number came from a
 figure, also state that the figure is an external (matplotlib) re-plot — see `figures/FIGURES.md`.
