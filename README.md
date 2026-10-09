@@ -1,7 +1,8 @@
 # psr-bilevel-eme-scope
 
 **A reproduction of a public bi-level adiabatic polarization-splitter-rotator (PSR) design on
-SOI 220 nm + 90 nm partial etch — plus a scope note on where EME's authority for this device ends.**
+SOI 220 nm + 90 nm partial etch — and the boundary of a mode-expansion insertion loss: port basis,
+discretisation and solver defaults.**
 
 **Companion repositories**: the passive-device library this design was selected from
 ([silicon-photonics-device-library](https://github.com/55093693k-dot/silicon-photonics-device-library)),
@@ -29,8 +30,10 @@ Short version:
 > context, or explicitly not referenceable.
 
 **Status**: mechanism verified; device-level IL **not** certified.
-**Archived**: `v1.0.3` (2026-09-28) — DOI **[10.5281/zenodo.23013982](https://doi.org/10.5281/zenodo.23013982)**;
-the concept DOI covering every version is **[10.5281/zenodo.22976303](https://doi.org/10.5281/zenodo.22976303)**.
+**Archived**: `v1.0.4` (2026-10-10). Its concept DOI — the one that covers every version — is
+**[10.5281/zenodo.22976303](https://doi.org/10.5281/zenodo.22976303)**; the *version* DOI for `v1.0.4`
+is written here once Zenodo has minted it. The previous version, `v1.0.3` (2026-09-28), is
+**[10.5281/zenodo.23013982](https://doi.org/10.5281/zenodo.23013982)**.
 
 **Wording revision** 2026-09-28: labels and wording — the coupler-segment figure for TM0 → out1 is now printed as **0.032%** where this page previously printed a rounded 0.03%, and the −0.29% column-sum change is now shown with its two per-channel components, 0.246% and 0.044%. No conclusion, criterion or scope changed.
 

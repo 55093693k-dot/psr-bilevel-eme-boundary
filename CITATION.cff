@@ -4,13 +4,19 @@ message: >-
   with any number you quote from it.
 title: >-
   psr-bilevel-eme-scope: a reproduction of a public bi-level adiabatic polarization
-  splitter-rotator (SOI 220 nm + 90 nm partial etch), with a scope note on where EME's
-  authority for this device ends
+  splitter-rotator (SOI 220 nm + 90 nm partial etch), and the boundary of a mode-expansion
+  insertion loss -- port basis, discretisation and solver defaults
 abstract: >-
   A reproduction of the public BilevelPSR design on an SOI 220 nm + 90 nm partial-etch platform,
   verified in two independent segments by two different numerical methods: the taper segment by
-  3D FDTD (TM0 -> TE1 = 98.35%) and the coupler segment by 3D EME (TE1 -> lower-arm TE0 = 99.233%,
+  3D FDTD (TM0 -> TE1 = 99.84%) and the coupler segment by 3D EME (TE1 -> lower-arm TE0 = 99.233%,
   passing a 4 -> 6 port-mode convergence check, delta = -0.29%).
+
+
+  The boundary is stated as a property of the numerical object, not of the device: a minimal S-bend,
+  re-read on a second solver (EME, varFDTD and an exact bent-waveguide FDE solve, recorded in
+  second_solver/), reads 0.055 / 0.765 / lossless for one nominal structure, and each numerical
+  choice moves the reading once its feature is amplified.
 
 
   SCOPE -- this is part of the citation, not a disclaimer added afterwards. Only the two
@@ -26,8 +32,8 @@ authors:
     given-names: "King Ho"
     orcid: "https://orcid.org/0009-0002-0435-2030"
 type: software
-version: "v1.0.3"
-date-released: "2026-09-28"
+version: "v1.0.4"
+date-released: "2026-10-10"
 # An SPDX *expression* is not allowed here: the Citation File Format schema
 # (https://citation-file-format.github.io/1.2.0/schema.json, checked 2026-09-26) accepts only
 # identifiers from the SPDX list, as a single string or as an array.  An array means "OR".
@@ -52,10 +58,11 @@ keywords:
 # and LICENSE-figures-and-data.md.  The two identifiers above are the machine-readable form of
 # that split (an array means "OR").
 #
-# DOI of the archived v1.0.3 release (2026-09-28): this is the *version* DOI.  The *concept* DOI that
-# covers every version of this repository is 10.5281/zenodo.22976303.  A later release gets its own
-# version DOI from Zenodo; update the line below by hand at that point.
-doi: "10.5281/zenodo.23013982"
+# DOI.  The *concept* DOI that covers every version of this repository is 10.5281/zenodo.22976303,
+# and that is what is written below, because it is known before the release exists.  v1.0.4 gets its
+# own *version* DOI from Zenodo once that release is minted; replace the line below with it then.
+# (The v1.0.3 version DOI was 10.5281/zenodo.23013982.)
+doi: "10.5281/zenodo.22976303"
 # version/date-released above are bumped together with the release tag.
 #
 # Zenodo (the service that mints the DOI) cannot read an array in the licence field, so the
