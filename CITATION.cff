@@ -33,7 +33,7 @@ authors:
     orcid: "https://orcid.org/0009-0002-0435-2030"
 type: software
 version: "v1.0.4"
-date-released: "2026-10-10"
+date-released: "2026-10-09"
 # An SPDX *expression* is not allowed here: the Citation File Format schema
 # (https://citation-file-format.github.io/1.2.0/schema.json, checked 2026-09-26) accepts only
 # identifiers from the SPDX list, as a single string or as an array.  An array means "OR".
@@ -58,11 +58,10 @@ keywords:
 # and LICENSE-figures-and-data.md.  The two identifiers above are the machine-readable form of
 # that split (an array means "OR").
 #
-# DOI.  The *concept* DOI that covers every version of this repository is 10.5281/zenodo.22976303,
-# and that is what is written below, because it is known before the release exists.  v1.0.4 gets its
-# own *version* DOI from Zenodo once that release is minted; replace the line below with it then.
-# (The v1.0.3 version DOI was 10.5281/zenodo.23013982.)
-doi: "10.5281/zenodo.22976303"
+# DOI: the *version* DOI of the archived release this file describes (v1.0.4, released 2026-10-09),
+# and the *concept* DOI that covers every version of this repository, which is
+# 10.5281/zenodo.22976303.  (The earlier v1.0.3 version DOI was 10.5281/zenodo.23013982.)
+doi: "10.5281/zenodo.23269305"
 # version/date-released above are bumped together with the release tag.
 #
 # Zenodo (the service that mints the DOI) cannot read an array in the licence field, so the

@@ -30,10 +30,10 @@ Short version:
 > context, or explicitly not referenceable.
 
 **Status**: mechanism verified; device-level IL **not** certified.
-**Archived**: `v1.0.4` (2026-10-10). Its concept DOI — the one that covers every version — is
-**[10.5281/zenodo.22976303](https://doi.org/10.5281/zenodo.22976303)**; the *version* DOI for `v1.0.4`
-is written here once Zenodo has minted it. The previous version, `v1.0.3` (2026-09-28), is
-**[10.5281/zenodo.23013982](https://doi.org/10.5281/zenodo.23013982)**.
+**Archived**: `v1.0.4` (2026-10-09) — version DOI
+**[10.5281/zenodo.23269305](https://doi.org/10.5281/zenodo.23269305)**; the concept DOI covering every
+version is **[10.5281/zenodo.22976303](https://doi.org/10.5281/zenodo.22976303)**. The previous version,
+`v1.0.3` (2026-09-28), is **[10.5281/zenodo.23013982](https://doi.org/10.5281/zenodo.23013982)**.
 
 **Wording revision** 2026-09-28: labels and wording — the coupler-segment figure for TM0 → out1 is now printed as **0.032%** where this page previously printed a rounded 0.03%, and the −0.29% column-sum change is now shown with its two per-channel components, 0.246% and 0.044%. No conclusion, criterion or scope changed.
 
@@ -331,9 +331,9 @@ project files. They are *results*, not dependencies — the scripts above regene
 **Citing this repository**: `CITATION.cff` carries the citation metadata for GitHub, and
 `.zenodo.json` carries the same scope text for the archived record. Cite the repository URL plus
 the date you accessed it, and carry the §6 scope with any number you quote. The archived release carries
-a DOI: cite **10.5281/zenodo.22976303** for the repository as a whole, or the *version* DOI of the
-release you used — `v1.0.3` (2026-09-28) is **10.5281/zenodo.23013982**, and `v1.0.4`'s version DOI is
-written here once Zenodo has minted it. `CITATION.cff` also carries the author's ORCID.
+a DOI: cite **10.5281/zenodo.23269305** (`v1.0.4`, 2026-10-09) for this version,
+**10.5281/zenodo.22976303** for the repository as a whole, or **10.5281/zenodo.23013982** for the
+earlier `v1.0.3` (2026-09-28). `CITATION.cff` also carries the author's ORCID.
 
 **If you reuse a number from here**: please carry the §6 scope with it. Where the number came from a
 figure, also state that the figure is an external (matplotlib) re-plot — see `figures/FIGURES.md`.
