@@ -12,7 +12,7 @@ figure** and in its PNG metadata.
 | `device_cross_section.png` | matplotlib **re-draw from the solver model** — cross-section at the adiabatic coupler | `external` | ✅ statement in the PNG `tEXt` chunk `External-Plot` **and in the manuscript caption**; **no on-figure footer** (2026-09-28). Original canvas kept as it was (1677x637 px) |
 
 **None of these three is a solver export.** Do not quote any of them as "the solver's own view".
-For the two referenceable numbers (`98.35%`, `99.233%`), cite §3 and §6 of the README — never a figure.
+For the two referenceable numbers (`99.84%`, `99.233%`), cite §3 and §6 of the README — never a figure.
 
 ## State of these figures — 2026-09-28 (later the same day)
 
