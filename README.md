@@ -35,6 +35,12 @@ Short version:
 version is **[10.5281/zenodo.22976303](https://doi.org/10.5281/zenodo.22976303)**. The previous version,
 `v1.0.3` (2026-09-28), is **[10.5281/zenodo.23013982](https://doi.org/10.5281/zenodo.23013982)**.
 
+**Preprint**: the same text is posted on **Optica Open** — posted **2026-10-20**, licence **CC BY 4.0**,
+DOI **[10.1364/opticaopen.34017153](https://doi.org/10.1364/opticaopen.34017153)** (landing page:
+`preprints.opticaopen.org`). Optica Open preprints are **not peer-reviewed** (the platform's own wording:
+`preprints are not peer-reviewed by Optica Open`), so cite this as a preprint and not as a reviewed
+publication, and carry the §6 scope with any number quoted from it.
+
 **Wording revision** 2026-09-28: labels and wording — the coupler-segment figure for TM0 → out1 is now printed as **0.032%** where this page previously printed a rounded 0.03%, and the −0.29% column-sum change is now shown with its two per-channel components, 0.246% and 0.044%. No conclusion, criterion or scope changed.
 
 **Cost of the runs reproduced here**: ≈ 0.34 + 0.38 FlexCredit (coupler segment, 4- and 6-mode runs);
@@ -316,7 +322,10 @@ project files. They are *results*, not dependencies — the scripts above regene
 
 **可引用的只有两个数**：`99.84%` 与 `99.233%`；引用时请一并引用 §6 的限制条款。
 （配套工程报告**随本仓发布**（英文原文见 §1–§8 与 notebook）；它的永久可引用副本 = 归档版本：
-**DOI `10.5281/zenodo.23013982`**（`v1.0.3`，2026-09-28；全部版本用 `10.5281/zenodo.22976303`）。）
+**DOI `10.5281/zenodo.23269305`**（`v1.0.4`，2026-10-09；全部版本用 `10.5281/zenodo.22976303`）。
+此外，同一份文本已挂在 **Optica Open 预印本平台**：**DOI `10.1364/opticaopen.34017153`**
+（2026-10-20 发布，CC BY 4.0）。该平台**不做同行评审**，引用时请按预印本处理，
+并随任何数字一并带上 §6 的限制条款。）
 
 ## Licence & attribution
 
