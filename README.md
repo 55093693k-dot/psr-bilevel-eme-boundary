@@ -41,6 +41,10 @@ DOI **[10.1364/opticaopen.34017153](https://doi.org/10.1364/opticaopen.34017153)
 `preprints are not peer-reviewed by Optica Open`), so cite this as a preprint and not as a reviewed
 publication, and carry the §6 scope with any number quoted from it.
 
+**External review** — the public discussion where the runs were reviewed, quoted in full as Appendix A of the
+preprint: `flexcompute/tidy3d` discussion **#3391**,
+<https://github.com/flexcompute/tidy3d/discussions/3391>.
+
 **Wording revision** 2026-09-28: labels and wording — the coupler-segment figure for TM0 → out1 is now printed as **0.032%** where this page previously printed a rounded 0.03%, and the −0.29% column-sum change is now shown with its two per-channel components, 0.246% and 0.044%. No conclusion, criterion or scope changed.
 
 **Cost of the runs reproduced here**: ≈ 0.34 + 0.38 FlexCredit (coupler segment, 4- and 6-mode runs);
