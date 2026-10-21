@@ -26,7 +26,7 @@ def check(mode) -> dict:
                 rec[prov + ":" + r] = "OK shape=%s" % (np.array(v).shape,)
             except Exception as exc:  # noqa: BLE001
                 rec[prov + ":" + r] = "FAIL:" + str(exc).splitlines()[0][:30]
-    # read back key object positions so we know the model is as intended
+    # read back key object positions to confirm the model is as intended
     for name, prop in (("varFDTD", "x span"), ("varFDTD", "y span"), ("varFDTD", "simulation time"),
                        ("source", "x"), ("source", "y"), ("source", "injection axis"),
                        ("monitor", "x"), ("monitor", "monitor type")):

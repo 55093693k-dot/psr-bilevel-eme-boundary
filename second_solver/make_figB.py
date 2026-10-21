@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """make_figB.py — Figure B: the reading moves when the numerical knob moves, not when the device does.
 
-All numbers are our own recorded runs (PERSONAL_BRAND/BUILDS/min_sbend_eme/PROBE_FINDINGS_20261007.md).
+All numbers are from the runs recorded here (second_solver/PROBE_FINDINGS_20261007.md).
 Labels are English so the figure is journal-ready without a CJK font.
 """
 from __future__ import annotations
