@@ -385,11 +385,11 @@ per-file map.
 These runs were reviewed by an engineer of the simulation platform on its public discussion board
 (thread 3391: https://github.com/flexcompute/tidy3d/discussions/3391). Two corrections were adopted
 and re-measured here; the reply itself is reproduced verbatim in appendix-A-external-reply.txt, with
-the note that it is the reviewer text and not our measurement.
+the note that it is the reviewer text and not a measurement reported here.
 
 - Taper segment FDTD: with use_colocated_integration=False on the port source and monitor, colocate=False
   on the monitor, and shutoff=1e-4, the TM0 -> TE1 reading is 99.84 %, against 98.35 % with the previous
-  settings. Our own re-run gives 0.9984, consistent with the 0.998 obtained in the review.
+  settings. The re-run reported here gives 0.9984, consistent with the 0.998 obtained in the review.
 - EME column sums: the earlier boundary came from 5 um straight cells across the S-bends; shorter cells
   converge to a loss-free column sum, and loss should be read as a sum over guided modes only.
 
