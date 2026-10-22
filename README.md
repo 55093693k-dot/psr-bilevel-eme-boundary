@@ -15,7 +15,7 @@ Short version:
   `TM0 → TE1 = 99.84%` (3D FDTD, taper segment) and `TE1 → lower-arm TE0 = 99.233%`
   (3D EME, coupler segment; passes a 4→6 port-mode convergence check, Δ = −0.29%).
 - **Device-level absolute insertion loss is deliberately not quoted.** In this structure the EME
-  port-power column sums stay ≈ 1 even after adding port modes (4 → 6), so within this port-mode basis no radiation-loss
+  port-power column sums stay ≈ 1 even after adding port modes (4 → 6 at 5 µm cells; 6 → 12 at 1 µm, §4.1), so within this port-mode basis no radiation-loss
   channel ever appears in the port-mode basis. Adding modes was tested and **ruled out as a route**
   to the loss number.
 - A **minimal S-bend** — the smallest structure that still shows why these numbers behave the way they
@@ -144,8 +144,40 @@ Two things are true at once here, and the second one is the reason this reposito
 2. the **column sums do not move away from 1** — the minimum actually moves *up*.
 
 **Scope of this check**: this structure, this length scale, 4 → 6 modes. It does **not** prove
-"EME can never give insertion loss". Also note that the −0.29% drop is accounted for by the enlarged port-mode basis — 0.246% of it into the two channels that exist only at 6 modes (out4/out5) and 0.044% into out2/out3 (per-channel column sums, run record) — so it demonstrates *convergence within the < 2% criterion* —
+"EME can never give insertion loss". (§4.1 repeats the same single-variable test at 1 µm cells with 6 → 12
+modes.) Also note that the −0.29% drop is accounted for by the enlarged port-mode basis — 0.246% of it into the two channels that exist only at 6 modes (out4/out5) and 0.044% into out2/out3 (per-channel column sums, run record) — so it demonstrates *convergence within the < 2% criterion* —
 not convergence to < 1%.
+
+### 4.1 The same test at 1 µm cells, 6 → 12 port modes (2026-10-23)
+
+The basis axis was stepped once more, at the **1 µm cell length** used for the cell ladder (305 EME
+cells, single frequency, `constraint = passive`, everything else unchanged):
+
+| quantity (λ = 1.55 µm, 1 µm cells) | 6 modes | **12 modes** | Δ |
+|---|---|---|---|
+| **TE1 → lower-arm TE0** (the key channel) | 0.998445 | **0.998870** | **+0.000425** (+0.04 points) |
+| TE1 → upper-arm TE0 (unwanted) | 0.001281 | 0.001282 | 0 |
+| **TE1 input column sum** | 0.999736 | **1.000161** | +0.000425 |
+| total reflected power (S11) | — | ≈ 1.1 × 10⁻⁴ | — |
+| cost | — | 1.769 FlexCredit (dry-run estimate) | — |
+
+**Same verdict, one step further out**: the column sum does not drop below 1 when the basis grows; it
+moves up by the same 0.000425 that the key channel gains. Within this basis, adding modes still does not
+expose a radiation-loss channel.
+
+**The direction of a basis step is not universal.** At 5 µm cells the 4 → 6 step moved the same channel
+**down** by 0.29 points (§4); at 1 µm cells the 6 → 12 step moves it **up** by 0.04. Both are an order of
+magnitude smaller than the first step of the cell ladder in the companion report (0.50 points, 5 → 2.5 µm),
+so basis and cell length are not interchangeable explanations of the same reading.
+
+**A trap worth recording**: the offline identification script (effective index *plus* field centroid)
+**mis-identifies the lower-arm fundamental once the basis reaches 12 modes** — it picks mode 9
+(n_eff 1.3775) and reports the key channel as 0.000. The numbers above are read straight from the solver's
+`smatrix/S21` with the two ports aligned by n_eff (lower-arm TE0: 2.4423 at 12 modes, 2.4424 at 6 modes —
+the same mode). Mode index is a queue position, not an identity.
+
+*Neither figure here is referenceable under §6 — they are port-mode-basis readings taken inside a basis
+sweep, not device efficiencies.*
 
 ---
 
@@ -203,7 +235,8 @@ The figure is an external (matplotlib) re-plot of the tabulated results, not a s
   The evidence is the column sums above; the remaining options are an **all-device 3D FDTD**
   (estimated ≈ 30 FlexCredit here) or **measurement**.
 - **Not covered at all**: the output section (S-bend + `L_t`, x 405…537.8 µm).
-- **Not a general claim**: the falsification is scoped to this structure / length scale / 4 → 6 modes.
+- **Not a general claim**: the falsification is scoped to this structure, these cell lengths, and 4 → 6
+  port modes at 5 µm cells / 6 → 12 at 1 µm cells.
 
 The formal quoting rules are collected in **§6**, and the two values that may be quoted are the two
 listed above.
@@ -211,8 +244,8 @@ listed above.
 ### 5.4 What this repository does not solve
 
 - The cause of the boundary in §5.3 is **not identified** here.
-- A larger port-mode basis (10 or more), and a different constraint, were **not tested** — outside the
-  scope of this work.
+- A port-mode basis **beyond 12 modes**, and a different constraint, were **not tested** — outside the
+  scope of this work. (The 6 → 12 step at 1 µm cells *was* run: +0.04 points, §4.1.)
 - The `unitary` vs `passive` discrepancy in §5.1 is **not explained** here;
   both sets of numbers from that pair are marked not referenceable as a result.
 - Whether the **port-mode basis covers every loss channel** (in particular radiative content a guided-mode basis cannot represent) is **not verified**; only the column-sum deficit (about 0.1%) bounds it;
@@ -310,6 +343,7 @@ closure; the others are the figures carried in their run records.
 | `notes/eme_coupler_4modes.md` | run record, 4-mode coupler segment (Chinese) | source record for §4 |
 | `notes/eme_coupler_6modes_convergence.md` | run record, 6-mode convergence check, incl. the self-rebuttal list and the argument behind the negative answer (Chinese) | source record for §4 and §5 |
 | `notes/log_an_passive_m2.txt` | offline analysis output of the `passive`, 2-port-mode all-device run (`TE0 → out0 = 0.0014`, IL 28.539 dB) | yes — the evidence for the `passive` row of §5.1 |
+| `notes/eme_coupler_12modes_basis_step.md` | run record, 6 → 12 port modes at 1 µm cells (+0.04 points; incl. the mode-identification trap) | source record for §4.1 |
 
 **Large outputs are deliberately not in this repo**: the cloud `.hdf5` results and the local solver
 project files. They are *results*, not dependencies — the scripts above regenerate them.
@@ -322,7 +356,9 @@ project files. They are *results*, not dependencies — the scripts above regene
 
 **器件级绝对插损我拒绝给数**：EME 端口功率逐列和恒 ≈ 1，把端口模式数从 4 加到 6 之后
 列和**没有**降到 <1（最低值反而从 0.99889 升到 0.99973）—— "加模式数就能暴露辐射损耗"
-这条直觉被那次 4→6 的 EME 运行否证（运行记录见 `notes/`）。要这个指标只能走全器件 3D FDTD 或流片实测。
+这条直觉被那次 4→6 的 EME 运行否证（运行记录见 `notes/`）。之后在 **1 µm 胞长**上再把端口模式
+从 6 加到 12：列和由 0.99974 升到 1.00016、关键通道升 0.04 个百分点，同样没有出现亏损（§4.1，
+运行记录 `notes/eme_coupler_12modes_basis_step.md`）。要这个指标只能走全器件 3D FDTD 或流片实测。
 
 **可引用的只有两个数**：`99.84%` 与 `99.233%`；引用时请一并引用 §6 的限制条款。
 （配套工程报告**随本仓发布**（英文原文见 §1–§8 与 notebook）；它的永久可引用副本 = 归档版本：
