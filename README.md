@@ -161,6 +161,24 @@ cells, single frequency, `constraint = passive`, everything else unchanged):
 | total reflected power (S11) | — | ≈ 1.1 × 10⁻⁴ | — |
 | cost | — | 1.769 FlexCredit (dry-run estimate) | — |
 
+and at **5 µm cells**, where the basis was stepped four times (4 / 6 / 20 / 40 modes; 0.49 and 0.75
+FlexCredit for the last two):
+
+| port modes | key channel | Δ from the previous rung |
+|---|---|---|
+| 4 | 0.99525 | — |
+| 6 | 0.99233 | −0.29 points |
+| 20 | **0.988972** | −0.34 points |
+| 40 | **0.988939** | **−0.003 points (flat)** |
+
+**What the two tables say together.** The basis axis *does* converge on this route, but only at a basis
+large enough to cost real money — 20 modes at 5 µm cells, 12 at 1 µm — and it converges to a value that
+does **not** agree with the independent implementation's: the review's table reads 0.99162 (20 modes) and
+0.99106 (40 modes) for the same scene, i.e. **0.21 points above** our converged value, even though the
+two agree to five decimals at 4 and 6 modes (0.99525 and 0.99233 in both). So "converged within one
+implementation" and "converged between implementations" are two different statements, and the second one
+fails here.
+
 **Same verdict, one step further out**: the column sum does not drop below 1 when the basis grows; it
 moves up by the same 0.000425 that the key channel gains. Within this basis, adding modes still does not
 expose a radiation-loss channel.
@@ -244,8 +262,9 @@ listed above.
 ### 5.4 What this repository does not solve
 
 - The cause of the boundary in §5.3 is **not identified** here.
-- A port-mode basis **beyond 12 modes**, and a different constraint, were **not tested** — outside the
-  scope of this work. (The 6 → 12 step at 1 µm cells *was* run: +0.04 points, §4.1.)
+- A port-mode basis **beyond 40 modes**, and a different constraint, were **not tested** — outside the
+  scope of this work. (The 6 → 12 step at 1 µm cells and the 4 → 6 → 20 → 40 ladder at 5 µm *were* run:
+  §4.1.)
 - The `unitary` vs `passive` discrepancy in §5.1 is **not explained** here;
   both sets of numbers from that pair are marked not referenceable as a result.
 - Whether the **port-mode basis covers every loss channel** (in particular radiative content a guided-mode basis cannot represent) is **not verified**; only the column-sum deficit (about 0.1%) bounds it;
