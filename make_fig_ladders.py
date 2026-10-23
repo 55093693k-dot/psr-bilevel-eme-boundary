@@ -41,7 +41,7 @@ COINCIDING_MODES = (4, 6)  # the two implementations agree to five decimals here
 
 STYLE = dict(
     **{
-        "font.family": "serif",
+        "font.family": "sans-serif",  # DejaVu Sans, the family every other figure in the paper uses
         "font.size": 7.2,
         "axes.linewidth": 0.5,
         "axes.labelsize": 7.2,
@@ -86,8 +86,8 @@ def run(out_dir: str) -> dict:
         # which collide with the six values that matter here
         axL.xaxis.set_minor_locator(matplotlib.ticker.NullLocator())
         axL.xaxis.set_minor_formatter(matplotlib.ticker.NullFormatter())
-        axL.set_xlabel("cell length (µm)   — finer →")
-        axL.set_ylabel("key channel  |S(out0←in0)|$^2$")
+        axL.set_xlabel("cell length / µm")
+        axL.set_ylabel("key channel")
 
         # ---------------- right: against the port-mode count ----------------
         _panel(axR, [m for m, _ in OURS_MODES], [v for _, v in OURS_MODES], "this work", "-")
@@ -99,8 +99,8 @@ def run(out_dir: str) -> dict:
         axR.set_xlim(3.4, 47)
         axR.xaxis.set_minor_locator(matplotlib.ticker.NullLocator())
         axR.xaxis.set_minor_formatter(matplotlib.ticker.NullFormatter())
-        axR.set_xlabel("port modes kept (5 µm cells)")
-        axR.set_ylabel("key channel  |S(out0←in0)|$^2$")
+        axR.set_xlabel("port modes kept")
+        axR.set_ylabel("key channel")
 
         for ax, letter in ((axL, "(a)"), (axR, "(b)")):
             ax.axhline(1.0, color="#9a9a9a", linewidth=0.6, linestyle=(0, (4, 3)), zorder=1)
