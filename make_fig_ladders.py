@@ -42,12 +42,12 @@ COINCIDING_MODES = (4, 6)  # the two implementations agree to five decimals here
 STYLE = dict(
     **{
         "font.family": "serif",
-        "font.size": 8.0,
-        "axes.linewidth": 0.6,
-        "axes.labelsize": 8.0,
-        "xtick.labelsize": 7.5,
-        "ytick.labelsize": 7.5,
-        "legend.fontsize": 7.0,
+        "font.size": 7.2,
+        "axes.linewidth": 0.5,
+        "axes.labelsize": 7.2,
+        "xtick.labelsize": 6.6,
+        "ytick.labelsize": 6.6,
+        "legend.fontsize": 6.6,
     }
 )
 C_OURS = "#1a1a1a"
@@ -67,63 +67,60 @@ def _panel(ax, xs, ys, label, style, filled=True, offset=0.0):
 
 def run(out_dir: str) -> dict:
     with plt.rc_context(STYLE):
-        fig, (axL, axR) = plt.subplots(1, 2, figsize=(6.6, 2.45))
+        # 5.25 in = the text width the figure style rule fixes for a single column
+        # (TRAINING/02_WRITING_STYLE_OPTICA.md Sec. 8, item 6). The left panel gets the extra
+        # width because it carries six tick positions against four.
+        fig, (axL, axR) = plt.subplots(1, 2, figsize=(5.25, 2.15),
+                                       gridspec_kw=dict(width_ratios=(1.25, 1.0)))
 
         # ---------------- left: against the cell length ----------------
         _panel(axL, [c for c, _ in OURS_CELLS], [v for _, v in OURS_CELLS], "this work", "-")
         _panel(axL, [c for c, _ in REVIEW_CELLS], [v for _, v in REVIEW_CELLS],
                "the review (quoted)", "--", filled=False, offset=0.02)
-        axL.annotate("quoted, not reproduced\n(962 cells > solver limit)",
-                     xy=(0.31 * 1.02, 0.99875), xytext=(0.62, 0.9898),
-                     fontsize=6.5, color=C_REVIEW, ha="left", va="center",
-                     arrowprops=dict(arrowstyle="-", color=C_REVIEW, linewidth=0.5,
-                                     shrinkA=2, shrinkB=3))
         axL.set_xscale("log")
         axL.invert_xaxis()  # finer cells to the right
         axL.set_xticks([5.0, 2.5, 1.5, 1.0, 0.75, 0.31])
         axL.set_xticklabels(["5", "2.5", "1.5", "1", "0.75", "0.31"])
+        axL.set_xlim(6.2, 0.265)
         # a log axis would otherwise add its own minor labels ("4x10^0", "6x10^-1", ...),
         # which collide with the six values that matter here
         axL.xaxis.set_minor_locator(matplotlib.ticker.NullLocator())
         axL.xaxis.set_minor_formatter(matplotlib.ticker.NullFormatter())
-        axL.set_xticklabels(["5", "2.5", "1.5", "1", "0.75", "0.31"])
-        axL.set_xlabel("cell length along the propagation direction (µm)  — finer →")
-        axL.set_ylabel("key channel  |S(out0 ← in0)|$^2$")
+        axL.set_xlabel("cell length (µm)   — finer →")
+        axL.set_ylabel("key channel  |S(out0←in0)|$^2$")
 
         # ---------------- right: against the port-mode count ----------------
         _panel(axR, [m for m, _ in OURS_MODES], [v for _, v in OURS_MODES], "this work", "-")
         _panel(axR, [m for m, _ in REVIEW_MODES], [v for _, v in REVIEW_MODES],
                "the review (quoted)", "--", filled=False, offset=-0.03)
-        for m in COINCIDING_MODES:
-            axR.annotate("", xy=(m * 0.97, 0.99525 if m == 4 else 0.99233),
-                         xytext=(m * 1.03, 0.99525 if m == 4 else 0.99233),
-                         arrowprops=dict(arrowstyle="-", color=C_REVIEW, linewidth=0.5))
+        axR.set_xscale("log")
         axR.set_xticks([4, 6, 20, 40])
         axR.set_xticklabels(["4", "6", "20", "40"])
-        axR.set_xlabel("port modes kept at each plane (5 µm cells)")
-        axR.text(12.5, 0.99520, "coincide to five decimals", fontsize=6.5, color=C_REVIEW)
-        axR.set_ylabel("key channel  |S(out0 ← in0)|$^2$")
+        axR.set_xlim(3.4, 47)
+        axR.xaxis.set_minor_locator(matplotlib.ticker.NullLocator())
+        axR.xaxis.set_minor_formatter(matplotlib.ticker.NullFormatter())
+        axR.set_xlabel("port modes kept (5 µm cells)")
+        axR.set_ylabel("key channel  |S(out0←in0)|$^2$")
 
-        for ax in (axL, axR):
+        for ax, letter in ((axL, "(a)"), (axR, "(b)")):
             ax.axhline(1.0, color="#9a9a9a", linewidth=0.6, linestyle=(0, (4, 3)), zorder=1)
             ax.set_ylim(0.9865, 1.0004)
             ax.grid(False)
             for side in ("top", "right"):
                 ax.spines[side].set_visible(False)
             ax.tick_params(direction="out", length=2.5, width=0.6)
-        axL.text(0.02, 0.94, "1.0000 = lossless", transform=axL.transAxes,
-                 fontsize=6.5, color="#6a6a6a", va="top")
-        axL.legend(loc="lower right", frameon=False, handlelength=2.2)
-        axR.legend(loc="lower left", frameon=False, handlelength=2.2)
+            # the panel letter is the only text this style allows inside the axes box
+            ax.text(0.015, 0.965, letter, transform=ax.transAxes, fontsize=7.5,
+                    fontweight="bold", va="top", ha="left")
 
-        fig.tight_layout(pad=0.4)
+        fig.subplots_adjust(left=0.115, right=0.985, bottom=0.205, top=0.90, wspace=0.42)
         os.makedirs(out_dir, exist_ok=True)
         pdf = os.path.join(out_dir, "fig-ladders.pdf")
         eps = os.path.join(out_dir, "fig-ladders.eps")
         png = os.path.join(out_dir, "fig-ladders.png")  # preview only; not used by LaTeX
         fig.savefig(pdf)
         fig.savefig(eps, format="eps")
-        fig.savefig(png, dpi=220)
+        fig.savefig(png, dpi=300)
         plt.close(fig)
 
     record = {
