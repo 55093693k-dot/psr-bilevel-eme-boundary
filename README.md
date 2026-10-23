@@ -419,6 +419,23 @@ observation above is stated for a class of structures, not for one device.
 | varFDTD (2.5-D effective index) | key channel **0.765** (same-caliber straight control 0.975) |
 | FDE bent-waveguide mode at R = 405 µm (exact) | **lossless**, 7.6 × 10⁻¹⁰ |
 
+**The same minimal structure on the first platform (Tidy3D EME), added 2026-10-23.** Straight cells,
+two modes per port, `constraint = passive`, one frequency; the only variable is the cell length, and
+the control is the same model with the bend replaced by a straight guide (`--dy 0`):
+
+| case | key channel (TE0) | column sum |
+|---|---|---|
+| straight control, 5 µm cells | **1.000** | **1.000** |
+| S-bend, 5 µm cells (40 cells) | **4.8 × 10⁻⁵** | 4.8 × 10⁻⁵ |
+| S-bend, 1 µm cells (200 cells) | **4.3 × 10⁻³** | 4.3 × 10⁻³ (TE1: 0.140) |
+
+So on this platform a 4.5°-maximum-slope S-bend reads almost zero, and refining the cells five-fold buys a
+factor of **90** — still nowhere near the physical answer. The control reads exactly 1.000, so this is the
+reading, not a broken model: **a straight-cell EME cannot represent a bend**; the staircase (0.4 µm lateral
+step per cell at 5 µm, 0.16 µm at 1 µm, against a 0.5 µm-wide guide) radiates the power away, cell by cell.
+That is the same direction as the second solver's 0.055 above, and it is why the review recommended bent
+cells. The bent-cell run was **not** done.
+
 Two things follow, and neither of them is a device number:
 
 - **The reading is a property of the method, not of the device.** One nominal structure, three
