@@ -444,6 +444,12 @@ Two things follow, and neither of them is a device number:
   over only 20 µm, the EME column sum moves by ≈ **800×** with the cell length (0.0085 % … 6.6 %) and
   by ≈ **44×** with the mode count (0.27 % … 3.5 %); the controls in which only the device changes all
   read ≈ 1 (straight 1.000, constant-5 µm-offset guide 1.000, width taper 0.999).
+- **A simple cut-off does not summarise this.** The obvious dimensionless group — the per-cell
+  lateral shift over the guide width, `r` = 3.9 / 2.0 / 0.79 / 0.39 across the amplified runs and
+  0.79 → 0.16 on the gentle bend — does not order the readings, neither within one structure nor
+  across the two platforms, so **no threshold is proposed**; the checklist is the four features, not a
+  number (0 FlexCredit, computed from the records already on disk):
+  [`notes/cell_ratio_criterion_20261024.md`](notes/cell_ratio_criterion_20261024.md).
 
 **Calibers.** No EME reading here is converged (both knobs are non-monotonic and still moving at the
 finest setting used), so they are evidence that the knobs dominate the reading — not convergence
