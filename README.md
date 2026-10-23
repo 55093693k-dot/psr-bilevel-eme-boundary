@@ -308,7 +308,7 @@ is the lever — at the cost of conversion and bandwidth, which then has to be r
 ## 7. Reproduce
 
 ```bash
-# dependency: pip install tidy3d==2.12   (and configure your own API key)
+# dependency: pip install tidy3d==2.11.2   (and configure your own API key)
 python sim/run_bilevel_psr.py --stage geometry       # whole-device structure figures (local, free)
 python sim/run_bilevel_psr.py --stage modes          # local mode self-check (free)
 python sim/run_bilevel_psr.py --stage eme            # validate + print the cost estimate (no submit)

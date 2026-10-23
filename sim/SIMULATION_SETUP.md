@@ -1,12 +1,12 @@
 # 仿真设置说明 — `PSR_ROTATE_ADIABATIC_BLT_v1`
 
-> 配套工程文件：`run_bilevel_psr.py`（本文件夹内，可直接运行）｜ 求解器：**Tidy3D EME（3D）**，tidy3d 2.12
+> 配套工程文件：`run_bilevel_psr.py`（本文件夹内，可直接运行）｜ 求解器：**Tidy3D EME（3D）**，tidy3d 2.11.2
 > 数据与结果：`../data/S_PARAMS.csv`、`../data/PORT_MODE_NEFF.csv`、`../data/PORT_MODE_FIELDS.png`
 
 ## 1. 运行方式
 
 ```powershell
-# 0) 依赖：pip install tidy3d==2.12；配置 API key（~/.config/tidy3d/config.toml）
+# 0) 依赖：pip install tidy3d==2.11.2；配置 API key（~/.config/tidy3d/config.toml）
 python run_bilevel_psr.py --stage geometry      # 出整器件结构图（本地，免费）
 python run_bilevel_psr.py --stage modes         # 本地模式复核（免费）：TE0/TM0 有效折射率随 x 的演化
 python run_bilevel_psr.py --stage eme           # 提交前校验 + 打印**估算成本**（不提交，免费）
