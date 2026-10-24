@@ -70,8 +70,8 @@ def run(out_dir: str) -> dict:
         # 5.25 in = the text width the figure style rule fixes for a single column
         # (TRAINING/02_WRITING_STYLE_OPTICA.md Sec. 8, item 6). The left panel gets the extra
         # width because it carries six tick positions against four.
-        fig, (axL, axR) = plt.subplots(1, 2, figsize=(5.25, 2.15),
-                                       gridspec_kw=dict(width_ratios=(1.25, 1.0)))
+        # equal panels: same type, same width, so the two ladders read the same way
+        fig, (axL, axR) = plt.subplots(1, 2, figsize=(5.25, 2.15))
 
         # ---------------- left: against the cell length ----------------
         _panel(axL, [c for c, _ in OURS_CELLS], [v for _, v in OURS_CELLS], "this work", "-")
