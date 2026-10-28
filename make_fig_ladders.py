@@ -54,8 +54,9 @@ C_OURS = "#1a1a1a"
 C_REVIEW = "#7a7a7a"
 
 
-def _panel(ax, xs, ys, label, style, filled=True, offset=0.0):
-    ax.plot([x * (1.0 + offset) for x in xs], ys, style, label=label,
+def _panel(ax, xs, ys, label, style, filled=True, offset=0.0, connect=True):
+    extra = {} if connect else {"linestyle": "None"}   # markers only, no implied trend
+    ax.plot([x * (1.0 + offset) for x in xs], ys, style, label=label, **extra,
             color=C_OURS if filled else C_REVIEW,
             marker="o" if filled else "s",
             markerfacecolor=C_OURS if filled else "none",
@@ -76,7 +77,7 @@ def run(out_dir: str) -> dict:
         # ---------------- left: against the cell length ----------------
         _panel(axL, [c for c, _ in OURS_CELLS], [v for _, v in OURS_CELLS], "this work", "-")
         _panel(axL, [c for c, _ in REVIEW_CELLS], [v for _, v in REVIEW_CELLS],
-               "the review (quoted)", "--", filled=False, offset=0.02)
+               "the review (quoted)", "--", filled=False, offset=0.0, connect=False)
         axL.set_xscale("log")
         axL.invert_xaxis()  # finer cells to the right
         axL.set_xticks([5.0, 2.5, 1.5, 1.0, 0.75, 0.31])
