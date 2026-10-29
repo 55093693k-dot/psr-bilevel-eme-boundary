@@ -29,8 +29,10 @@ import matplotlib.ticker as ticker  # noqa: E402
 HERE = os.path.dirname(os.path.abspath(__file__))
 
 # (cells along the bend, column sum) -- one entry per basis size
-CELLS_8 = [(12, 8.5e-5), (24, 6.6e-2), (60, 1.15e-2), (120, 3.8e-2)]
-CELLS_32 = [(12, 2.228e-2), (24, 1.557e-1), (60, 3.489e-2), (120, 2.161e-2)]
+CELLS_8 = [(12, 8.5e-5), (24, 6.6e-2), (60, 1.15e-2), (120, 3.8e-2),
+           (240, 1.26958e-1), (480, 3.821e-3)]
+CELLS_32 = [(12, 2.228e-2), (24, 1.557e-1), (60, 3.489e-2), (120, 2.161e-2),
+            (240, 7.248e-3), (480, 2.913e-3)]
 # (port modes kept, column sum) at 1 um cells
 MODES = [(2, 2.7e-3), (4, 8.0e-4), (8, 1.15e-2), (16, 1.7e-3), (32, 3.5e-2)]
 # taper segment in two calibers
@@ -78,7 +80,7 @@ def run(out_dir: str) -> dict:
                      markerfacecolor="none", label="32 modes")
         axA.set_xlabel("cells along the bend")
         axA.set_ylabel("column sum")
-        axA.set_xticks([12, 24, 60, 120])
+        axA.set_xticks([12, 60, 120, 240, 480])   # 24 stays a plotted point, not a tick: 12/24 collide
         axA.legend(loc="lower right", handlelength=2.0)
         _letter(axA, "(a)")
 
