@@ -41,6 +41,12 @@ N_3UM = [(4, 1.163e-1), (8, 5.04e-2), (16, 7.8e-3)]
 
 STYLE = {
     "font.family": "Arial",
+    # mathtext ignores font.family, and its default (DejaVu) is not one of the four
+    # families IOP accepts in vector art, so the two math labels are pinned to Arial too
+    "mathtext.fontset": "custom",
+    "mathtext.rm": "Arial",
+    "mathtext.it": "Arial:italic",
+    "mathtext.bf": "Arial:bold",
     "font.size": 8.0,
     "axes.linewidth": 0.5,
     "axes.labelsize": 8.0,
