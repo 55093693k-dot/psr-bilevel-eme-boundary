@@ -35,7 +35,7 @@ RUNS = [
 ]
 
 STYLE = {
-    "font.family": "sans-serif",
+    "font.family": "Arial",
     "font.size": 8.0,
     "axes.linewidth": 0.5,
     "axes.labelsize": 8.0,
@@ -60,8 +60,8 @@ def run(out_dir: str) -> dict:
                 ax.spines[side].set_visible(False)
             ax.tick_params(direction="out", length=2.5, width=0.5)
             ax.tick_params(axis="y", length=0)
-            ax.text(0.012, 0.94, letter, transform=ax.transAxes, fontsize=7.5,
-                    fontweight="bold", va="top", ha="left")
+            # panel letter above the axes, never inside the plot area
+            ax.set_title(letter, loc="left", fontsize=7.5, fontweight="bold", pad=3.0)
             ax.set_xlim(0.9986, 1.0003)
             ax.set_xticks([0.9986, 0.9990, 0.9994, 0.9998, 1.0000, 1.0002])
             ax.set_xticklabels(["0.9986", "0.9990", "0.9994", "0.9998", "1.0000", "1.0002"])

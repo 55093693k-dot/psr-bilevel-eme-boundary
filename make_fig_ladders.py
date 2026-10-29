@@ -41,7 +41,7 @@ COINCIDING_MODES = (4, 6)  # the two implementations agree to five decimals here
 
 STYLE = dict(
     **{
-        "font.family": "sans-serif",  # DejaVu Sans, the family every other figure in the paper uses
+        "font.family": "Arial",  # Helvetica family, the only families IOP accepts in vector art
         "font.size": 7.2,
         "axes.linewidth": 0.5,
         "axes.labelsize": 7.2,
@@ -110,9 +110,8 @@ def run(out_dir: str) -> dict:
             for side in ("top", "right"):
                 ax.spines[side].set_visible(False)
             ax.tick_params(direction="out", length=2.5, width=0.6)
-            # the panel letter is the only text this style allows inside the axes box
-            ax.text(0.015, 0.965, letter, transform=ax.transAxes, fontsize=7.5,
-                    fontweight="bold", va="top", ha="left")
+            # the panel letter sits above the axes box, never over a data point
+            ax.set_title(letter, loc="left", fontsize=7.5, fontweight="bold", pad=3.0)
 
         fig.subplots_adjust(left=0.115, right=0.985, bottom=0.205, top=0.90, wspace=0.42)
         os.makedirs(out_dir, exist_ok=True)

@@ -31,7 +31,7 @@ ROWS = [
 ]
 
 STYLE = {
-    "font.family": "sans-serif",
+    "font.family": "Arial",
     "font.size": 8.0,
     "axes.linewidth": 0.5,
     "axes.labelsize": 8.0,

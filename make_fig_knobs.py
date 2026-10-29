@@ -40,7 +40,7 @@ N_5UM = [(4, 8.5e-5), (8, 8.45e-2), (16, 5.51e-2)]
 N_3UM = [(4, 1.163e-1), (8, 5.04e-2), (16, 7.8e-3)]
 
 STYLE = {
-    "font.family": "sans-serif",
+    "font.family": "Arial",
     "font.size": 8.0,
     "axes.linewidth": 0.5,
     "axes.labelsize": 8.0,
@@ -53,8 +53,9 @@ STYLE = {
 
 
 def _letter(ax, s):
-    ax.text(0.015, 0.965, s, transform=ax.transAxes, fontsize=7.5,
-            fontweight="bold", va="top", ha="left")
+    """Panel letters sit above the axes, left-aligned: IOP fixes the font family but
+    not the placement, and above the axes is the one place a letter cannot cover data."""
+    ax.set_title(s, loc="left", fontsize=7.5, fontweight="bold", pad=3.0)
 
 
 def run(out_dir: str) -> dict:
@@ -92,7 +93,7 @@ def run(out_dir: str) -> dict:
         axC.set_xticks(list(xs))
         axC.set_xticklabels([k for k, _ in CALIBER])
         axC.set_ylim(0.975, 1.0005)
-        axC.set_ylabel("reading")
+        axC.set_ylabel("column sum")
         axC.axhline(1.0, color="#9a9a9a", linewidth=0.6, linestyle=(0, (4, 3)))
         _letter(axC, "(c)")
 
@@ -108,7 +109,7 @@ def run(out_dir: str) -> dict:
         axD.xaxis.set_minor_locator(ticker.NullLocator())
         axD.set_xlabel("cells per bend, $N = L_{\\rm bend}/\\ell$")
         axD.set_ylabel("column sum")
-        axD.legend(loc="lower left", handlelength=2.0)
+        axD.legend(loc="lower right", handlelength=2.0)
         _letter(axD, "(d)")
 
         for ax in (axA, axB, axC, axD):
