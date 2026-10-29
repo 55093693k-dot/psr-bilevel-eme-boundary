@@ -123,7 +123,7 @@ def run(out_dir: str) -> dict:
             for side in ("top", "right"):
                 ax.spines[side].set_visible(False)
             ax.tick_params(direction="out", length=2.5, width=0.6)
-        fig.subplots_adjust(left=0.11, right=0.985, bottom=0.11, top=0.975,
+        fig.subplots_adjust(left=0.11, right=0.985, bottom=0.11, top=0.94,
                             wspace=0.34, hspace=0.42)
         os.makedirs(out_dir, exist_ok=True)
         pdf = os.path.join(out_dir, "fig-knobs.pdf")
