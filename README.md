@@ -272,9 +272,11 @@ listed above.
   addressed**.
 
 **Companion report**: the report *is* this repository (README §1–§8 plus the notebook). Its permanent,
-citable copy is the archived release — DOI
-**[10.5281/zenodo.23013982](https://doi.org/10.5281/zenodo.23013982)** (`v1.0.3`, 2026-09-28;
-all versions: [10.5281/zenodo.22976303](https://doi.org/10.5281/zenodo.22976303)).
+citable copy is the archived release: cite the **version DOI of the release you actually used** (listed at
+the top of this file), or the concept DOI
+**[10.5281/zenodo.22976303](https://doi.org/10.5281/zenodo.22976303)**, which always resolves to the latest
+version. *(This paragraph used to name `v1.0.3` here and `v1.0.5` at the top; one place now says "the
+release you used", so it cannot go stale again.)*
 
 ---
 

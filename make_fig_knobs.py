@@ -36,7 +36,7 @@ CELLS_32 = [(12, 2.228e-2), (24, 1.557e-1), (60, 3.489e-2), (120, 2.161e-2),
 # (port modes kept, column sum) at 1 um cells
 MODES = [(2, 2.7e-3), (4, 8.0e-4), (8, 1.15e-2), (16, 1.7e-3), (32, 3.5e-2)]
 # taper segment in two calibers
-CALIBER = [("platform\ndefault", 0.9835), ("review\nsettings", 0.9984)]
+CALIBER = [("platform\ndefault", 0.9835), ("reply\nsettings", 0.9984)]
 # (N = L_bend / ell, column sum) for two lateral offsets, at a fixed 5 um cell
 N_5UM = [(4, 8.5e-5), (8, 8.45e-2), (16, 5.51e-2)]
 N_3UM = [(4, 1.163e-1), (8, 5.04e-2), (16, 7.8e-3)]
